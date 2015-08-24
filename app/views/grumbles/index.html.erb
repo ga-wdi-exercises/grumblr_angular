@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Grumbles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Authorname</th>
+      <th>Content</th>
+      <th>Title</th>
+      <th>Photourl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grumbles.each do |grumble| %>
+      <tr>
+        <td><%= grumble.authorName %></td>
+        <td><%= grumble.content %></td>
+        <td><%= grumble.title %></td>
+        <td><%= grumble.photoUrl %></td>
+        <td><%= link_to 'Show', grumble %></td>
+        <td><%= link_to 'Edit', edit_grumble_path(grumble) %></td>
+        <td><%= link_to 'Destroy', grumble, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grumble', new_grumble_path %>
