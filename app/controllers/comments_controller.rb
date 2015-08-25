@@ -7,7 +7,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @grumble = Grumble.find(params[:grumble_id])
+    @comment = @grumble.comments.build(comment_params)
 
     if @comment.save
       render json: @comment.to_json, status: :created
