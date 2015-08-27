@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @grumble = Grumble.find(params[:grumble_id])
-    @comments = @grumble.comments
+    @comments = @grumble.comments.order(:created_at)
 
     render json: @comments.to_json, status: :ok
   end

@@ -1,7 +1,6 @@
 class GrumblesController < ApplicationController
   def index
-    @grumbles = Grumble.all
-
+    @grumbles = Grumble.all.order(:created_at)
 
     render json: @grumbles.to_json, status: :ok
   end
