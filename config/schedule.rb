@@ -21,5 +21,5 @@
 
 # reseed database
 every 10.minutes do
-  rake "db:seed"
+  rake "db:seed", environment: "development"
 end
