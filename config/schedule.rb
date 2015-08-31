@@ -19,6 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
+# reseed database
 every 10.minutes do
   rake "db:seed"
 end
