@@ -11,7 +11,7 @@ def advice
 end
 
 def photo
-  JSON.parse(HTTParty.get("http://www.splashbase.co/api/v1/images/random?images_only=true").body).url
+  JSON.parse(HTTParty.get("http://www.splashbase.co/api/v1/images/random?images_only=true").body)["url"]
 end
 
 def comment
