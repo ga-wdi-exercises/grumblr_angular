@@ -22,7 +22,7 @@ def comment
     "I'd encourage you to think more broadly of",
     "This just goes to show your ignorance about",
     "Who wrote this? It sounds like it was written by",
-    "This is all well and good, but what about",
+    "This is all well and good, but one mustn't forget about",
     "People said the same thing when there was",
     "I'm not sure how to feel about this. My opinions are usually informed by",
     "I feel like a more appropriate picture for this post would be",
