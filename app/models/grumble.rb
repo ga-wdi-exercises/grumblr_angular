@@ -1,6 +1,6 @@
 class Grumble < ActiveRecord::Base
   has_many :comments, dependent: :destroy
-  after_destroy :reseed_if_no_more_grumbles
+  #after_destroy :reseed_if_no_more_grumbles
 
   private
   def reseed_if_no_more_grumbles
