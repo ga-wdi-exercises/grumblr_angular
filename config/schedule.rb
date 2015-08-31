@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 15.minutes do
+every 10.minutes do
   rake "db:seed"
 end
