@@ -1,8 +1,8 @@
 require('buzzfeed_title_generator')
 require('httparty')
 
-#Grumble.destroy_all
-#Comment.destroy_all
+Grumble.destroy_all
+Comment.destroy_all
 
 names = %w(Jesse Adam Andy Robin Adrian Matt)
 
@@ -31,7 +31,7 @@ def comment
     "I've responded to this in my post about",
     "Didn't you know? The government is secretly controlled by"
   ]
-  prompt = HTTParty.get("http://www.ineedaprompt.com?api").body
+  prompt = HTTParty.get("http://www.ineedaprompt.com?api&prompt=#{rand(4) + 3}").body
   comments.sample + " " + prompt[0,1].downcase + prompt[1..-1]
 end
 
