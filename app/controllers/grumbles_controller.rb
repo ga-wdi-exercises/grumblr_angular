@@ -4,6 +4,10 @@ class GrumblesController < ApplicationController
 
     render json: @grumbles.to_json, status: :ok
   end
+  def show
+    @grumble = Grumble.find(params[:id])
+    render json: @grumble.to_json, status: :ok
+  end
 
   def create
     @grumble = Grumble.new(grumble_params)
