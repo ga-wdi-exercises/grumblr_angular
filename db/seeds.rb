@@ -1,8 +1,8 @@
 require('buzzfeed_title_generator')
 require('httparty')
 
-Grumble.destroy_all
-Comment.destroy_all
+Comment.delete_all
+Grumble.delete_all
 
 names = %w(Jesse Adam Andy Robin Adrian Matt)
 
