@@ -25,6 +25,10 @@
           console.log(response);
           $state.go($state.current, {}, {reload: true});
         }
+        scope.ifDeleteSuccessful = function(){
+          console.log("Deleted!");
+          $state.go("grumbleIndex");
+        }
       }
     }
   }
