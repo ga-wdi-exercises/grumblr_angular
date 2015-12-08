@@ -3,7 +3,9 @@
 (function(){
   angular
   .module("grumblr", [
-    "ui.router"
+    "ui.router",
+    "ngResource",
+    "grumbleIndexControllerModule"
   ])
   .config([
     "$stateProvider",
@@ -15,7 +17,8 @@
     $stateProvider
     .state("grumbleIndex", {
       url: "/grumbles",
-      templateUrl: "js/grumbles/index.html"
+      templateUrl: "js/grumbles/index.html",
+      controller: "GrumbleIndexController"
     })
     .state("grumbleShow", {
       url: "/grumbles/:id",
