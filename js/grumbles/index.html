@@ -1,5 +1,5 @@
 <h2>These are the Grumbles</h2>
 
-<div data-ng-controller="GrumbleIndexController">
-  <div data-ng-repeat="grumble in grumbles">{{ grumble.title }}</div>
+<div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
+  <p>{{grumble.title}}</p>
 </div>

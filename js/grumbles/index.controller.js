@@ -2,17 +2,13 @@
 
 (function(){
   angular
-  .module("grumbleIndexControllerModule", [])
+  .module("grumbles")
   .controller("GrumbleIndexController", [
-    "$scope",
+    "GrumbleFactory",
     GrumbleIndexControllerFunction
   ]);
 
-  function GrumbleIndexControllerFunction($scope){
-    $scope.grumbles = [
-      {title: "This is the first Grumble"},
-      {title: "Yet another Grumble"},
-      {title: "Moar Grumbles"}
-    ];
+  function GrumbleIndexControllerFunction(GrumbleFactory){
+    this.grumbles = GrumbleFactory.query();
   }
 }());
