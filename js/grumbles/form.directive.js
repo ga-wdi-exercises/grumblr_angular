@@ -26,6 +26,11 @@
             console.log(response);
           });
         }
+        scope.delete = function(){
+          scope.grumble.$delete({id: scope.grumble.id}, function(){
+            $state.go("grumbleIndex", {}, {reload: true});
+          });
+        }
       }
     }
   }
