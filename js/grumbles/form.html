@@ -4,10 +4,10 @@
   <input placeholder="Photo URL" data-ng-model="grumble.photoUrl" />
   <textarea placeholder="Grumble content" data-ng-model="grumble.content"></textarea>
   <div data-ng-if="grumble.id">
-    <button type="button" data-ng-click="grumble.$update({id: grumble.id}, ifSaveSuccessful)">Update</button>
+    <button type="button" data-ng-click="grumble.$update({id: grumble.id}, ifUpdateSuccessful)">Update</button>
     <button type="button" data-ng-click="grumble.$delete({id: grumble.id}, ifDeleteSuccessful)">Delete</button>
   </div>
   <div data-ng-if="!grumble.id">
-    <button type="button" data-ng-click="grumble.$save(ifSaveSuccessful)">Create</button>
+    <button type="button" data-ng-click="grumble.$save(ifCreateSuccessful)">Create</button>
   </div>
 </form>

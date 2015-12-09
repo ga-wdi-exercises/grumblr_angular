@@ -21,9 +21,13 @@
       },
       link: function(scope, element, attributes){
         if(!scope.grumble) scope.grumble = new GrumbleFactory();
-        scope.ifSaveSuccessful = function(response){
-          console.log(response);
-          $state.go($state.current, {}, {reload: true});
+        scope.ifCreateSuccessful = function(response){
+          scope.$parent.GrumbleIndexViewModel.grumbles.push(response);
+          scope.grumble = new GrumbleFactory();
+          console.log("Created!");
+        }
+        scope.ifUpdateSuccessful = function(response){
+          console.log("Updated!");
         }
         scope.ifDeleteSuccessful = function(){
           console.log("Deleted!");
