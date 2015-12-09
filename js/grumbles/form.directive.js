@@ -18,7 +18,12 @@
       link: function(scope){
         scope.create = function(){
           scope.grumble.$save(function(response){
-            $state.go("grumbleIndex", {}, {reload: true})
+            $state.go("grumbleIndex", {}, {reload: true});
+          });
+        }
+        scope.update = function(){
+          scope.grumble.$update({id: scope.grumble.id}, function(response){
+            console.log(response);
           });
         }
       }
