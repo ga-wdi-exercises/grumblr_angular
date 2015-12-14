@@ -13,15 +13,31 @@ Submit an issue with a link to your code on this repo to turn in.
 
 ## Wednesday
 
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.0) |
+[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.0)
+
+    $ git checkout -b ui-router 1.0.0
+
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.1)
+
+    $ git checkout -b ui-router 1.0.1
 
 ## Thursday
 
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.0) |
+[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.0)
+
+    $ git checkout -b custom-directives 2.0.0
+
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.1)
+
+    $ git checkout -b custom-directives 2.0.1
 
 ## Friday
 
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.0) |
+[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.0)
+
+    $ git checkout -b custom-directives-with-auth 3.0.0
+
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.1)
+
+    $ git checkout -b custom-directives-with-auth 3.0.1
+
