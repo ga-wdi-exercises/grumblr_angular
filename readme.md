@@ -19,7 +19,7 @@ Submit an issue with a link to your code on this repo to turn in.
 
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.1)
 
-    $ git checkout -b ui-router 1.0.1
+    $ git checkout -b ui-router-solution 1.0.1
 
 ## Thursday
 
@@ -29,7 +29,7 @@ Submit an issue with a link to your code on this repo to turn in.
 
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.1)
 
-    $ git checkout -b custom-directives 2.0.1
+    $ git checkout -b custom-directives-solution 2.0.1
 
 ## Friday
 
@@ -39,5 +39,5 @@ Submit an issue with a link to your code on this repo to turn in.
 
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.1)
 
-    $ git checkout -b custom-directives-with-auth 3.0.1
+    $ git checkout -b custom-directives-with-auth-solution 3.0.1
 
