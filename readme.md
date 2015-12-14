@@ -9,7 +9,7 @@ edit, update, and delete functionality. No deliverable tonight.
 
 You will have forked and cloned this repository in class. Complete
 show and edit functionality with routes for show, new, and edit. 
-Submit a PR to this repo to turn in.
+Submit an issue with a link to your code on this repo to turn in.
 
 ## Wednesday
 
