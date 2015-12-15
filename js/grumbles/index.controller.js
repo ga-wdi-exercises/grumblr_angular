@@ -7,6 +7,6 @@
     ]);
     function GrumbleIndexControllerFunction(){
       console.log("Imin the controller");
-      this.grumble = "my first grumbe"
+      this.grumbles = grumbles;
     }
 }());
