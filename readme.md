@@ -19,7 +19,7 @@ Submit an issue with a link to your code on this repo to turn in.
 
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.1)
 
-    $ git checkout -b ui-router-solution 1.0.1
+    $ git checkout ui-router-solution
 
 ## Thursday
 
