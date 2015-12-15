@@ -10,5 +10,5 @@
 
   function GrumbleShowControllerFunction($stateParams){
     this.grumble = grumbles[$stateParams.id];
-  }
+  };
 }());
