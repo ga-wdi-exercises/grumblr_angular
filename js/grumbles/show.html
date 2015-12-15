@@ -1,3 +1,10 @@
 <h2>{{GrumbleShowViewModel.grumble.title}}</h2>
 
-<a href="/grumbles" ng-click="GrumbleShowViewModel.delete()">(-)</a>
+<a href="/grumbles" ng-click="GrumbleShowViewModel.delete()">(Delete)</a>
+
+<a href="#" ng-click="formIsVisible = !formIsVisible; GrumbleShowViewModel.edit()">(Edit)</a>
+<form ng-show="formIsVisible" ng-submit="GrumbleShowViewModel.update(); formIsVisible = !formIsVisible">
+  <label>Title:</label>
+  <input type="text" name="title" ng-model="GrumbleShowViewModel.grumbleEdit.title">
+  <input type="submit">
+</form>

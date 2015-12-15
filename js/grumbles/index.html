@@ -3,7 +3,7 @@
   <p><a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a></p>
 </div>
 
-<a href="#" ng-click="formIsVisible = !formIsVisible">(+)</a>
+<a href="#" ng-click="formIsVisible = !formIsVisible">(New)</a>
 <form ng-show="formIsVisible" ng-submit="GrumbleIndexViewModel.create()">
   <label>Title:</label>
   <input type="text" name="title" ng-model="GrumbleIndexViewModel.newGrumble.title">
