@@ -1,3 +1,171 @@
-input, textarea{
-  display:block;
+body{
+  font-family: "Merienda One";
+}
+.mainnav {
+  list-style-type: none;
+  text-align: left;
+}
+.mainnav li{
+  display: inline;
+}
+.mainnav a {
+  margin: 10px;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: rgba(255, 0, 0, 0.5);
+  text-decoration: none;
+}
+main{
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1200px;
+  color: white;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.createform{
+  display: none;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 100%;
+}
+.createform input {
+  display: block;
+  width: 30%;
+  margin-top: 5px;
+  margin: 0 auto;
+}
+label{
+  font-size: 15px;
+  color: white;
+}
+
+button{
+  width: 250px;
+  height: 40%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.started{
+  background-color: rgba(153, 204, 255, 0.6);
+}
+.started:hover{
+  background-color: rgba(153, 204, 255, 1);
+}
+#searchquery{
+  width: 40%;
+  height: 30px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.angulardiv{
+  width: 80%;
+  border-radius: 10%;
+  font-size: 15px;
+  padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: black;
+  margin: 0 auto;
+}
+
+.angulardiv a{
+  color: black;
+  text-decoration: none;
+  padding: 4px;
+}
+.allgrumblrs {
+  display: inline-table;
+  margin: 20px;
+  margin-top: 70px;
+}
+.edit{
+  font-size: 10px;
+  width: 60px;
+  height: 4%;
+}
+
+.editform{
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.editform input {
+  display: block;
+  width: 80%;
+  height: 30px;
+  margin-top: 5px;
+  margin: 0 auto;
+  color: black;
+}
+.update:hover{
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 56px;
+}
+.cancel:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+h2{
+  margin-top: 60px;
+  font-family: 'Merriweather';
+  color: black;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.index{
+  font-family: 'Merriweather';
+  display: inline-flex;
+  font-size: 22px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.index a {
+  color: black;
+}
+.index:hover{
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20%;
+}
+.create:hover{
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.inputfield{
+  margin-top: 10px;
+  width: 55%;
+  height: 35px;
+  font-size: 18px;
+}
+.logo{
+  font-size: 30px;
+  margin-right: 20px;
+  text-shadow: 1px 1px 1px gray;
+}
+.logo:hover{
+  text-shadow: 4px 4px 4px gray;
 }
