@@ -1,14 +1,3 @@
-"use strict";
-
-(function(){
-  angular
-  .module("grumbles")
-  .controller("GrumbleShowController", [
-  "$stateParams",
-  GrumbleShowControllerFunction
-  ]);
-
-  function GrumbleShowControllerFunction($stateParams){
-    this.grumble = grumbles[$stateParams.id];
-  }
-}());
+<div data-ng-model="GrumbleShowViewModel.grumble.title">
+<h2>{{GrumbleShowViewModel.grumble.title}}</h2>
+</div>

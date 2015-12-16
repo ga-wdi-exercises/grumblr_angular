@@ -72,12 +72,6 @@ button{
 .started:hover{
   background-color: rgba(153, 204, 255, 1);
 }
-.login{
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.login:hover{
-  background-color: rgba(0, 0, 0, 0.2);
-}
 #searchquery{
   width: 40%;
   height: 30px;
@@ -86,15 +80,6 @@ a {
   color: white;
   text-decoration: none;
 }
-.logo{
-  font-size: 30px;
-  margin-right: 20px;
-  text-shadow: 1px 1px 1px gray;
-}
-.logo:hover{
-  text-shadow: 4px 4px 4px gray;
-}
-
 .angulardiv{
   width: 80%;
   border-radius: 10%;
@@ -136,35 +121,51 @@ a {
   margin: 0 auto;
   color: black;
 }
-
-.update{
-  width: 54px;
-  display: inline;
-  height: 4%;
-  font-size: 12px;
-  text-align: center;
-  background-color: rgba(153, 204, 255, 0.6);
-}
-
 .update:hover{
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  width: 56px;
-}
-.delete{
-  width: 54px;
-  display: inline;
-  height: 4%;
-  font-size: 12px;
-  text-align: center;
-  background-color: rgba(255, 0, 0, 0.5);
-}
-.delete:hover{
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 56px;
 }
 .cancel:hover{
   background-color: rgba(0, 0, 0, 0.3);
 }
-.edit:hover{
-  background-color: rgba(0,0,0, 0.3);
+
+h2{
+  margin-top: 60px;
+  font-family: 'Merriweather';
+  color: black;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.index{
+  font-family: 'Merriweather';
+  display: inline-flex;
+  font-size: 22px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.index a {
+  color: black;
+}
+.index:hover{
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20%;
+}
+.create:hover{
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.inputfield{
+  margin-top: 10px;
+  width: 55%;
+  height: 35px;
+  font-size: 18px;
+}
+.logo{
+  font-size: 30px;
+  margin-right: 20px;
+  text-shadow: 1px 1px 1px gray;
+}
+.logo:hover{
+  text-shadow: 4px 4px 4px gray;
 }
