@@ -1,0 +1,9 @@
+<h2>Grumbles Index</h2>
+<form ng-submit="GrumbleIndexViewModel.create()">
+  <input type="text"  ng-model="GrumbleIndexViewModel.newGrumble.title">
+  <input type="submit" value="New Grumble">
+</form>
+<p ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
+  <a ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a>
+  <button ng-click="GrumbleIndexViewModel.delete($index)">Remove</button>
+</p>
