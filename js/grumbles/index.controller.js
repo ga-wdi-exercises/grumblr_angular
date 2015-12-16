@@ -8,14 +8,7 @@
   ]);
 
   function GrumbleIndexControllerFunction(){
-    this.grumbles = [
-      {
-        title: "I am Grumble One"
-      },
-      {
-        title: "I'm another Grumble"
-      }
-    ];
+    this.grumbles = grumbles;
     this.newGrumble = {};
     this.create = function(){
       grumbles.unshift(this.newGrumble);
