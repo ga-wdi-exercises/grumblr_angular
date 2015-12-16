@@ -13,13 +13,9 @@
 <div data-ng-controller='GrumbleIndexController as grumblesViewModel'>
     <h1>Grumblr</h1>
     <div class="container">
-      <!-- create text explosion  -->
-      <div class="row">
-     <h1 class="centerdiv"> <a id="logo"class="button round"> Grumblr</a> </h1>
-      </div>
 
 
-      <div class="row">
+
             <div data-ng-repeat="grumblr in grumblesViewModel.grumbles">
               <p data-ng-show="!edit">{{$index}}{{grumblr}}</p>
               <button class ="edit" data-ng-click="grumblesViewModel.edit($index); edit = !edit">Edit</button>
