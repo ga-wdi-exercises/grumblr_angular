@@ -1,0 +1,9 @@
+<h3>I'm the Grumbls index!</h3>
+<div>
+  <input data-ng-model="GrumblIndexViewModel.newGrumbl.title" placeholder="Let it all out..."/>
+  <button type='button' data-ng-click="GrumblIndexViewModel.create()">Girl, tell it!</button>
+</div>
+<div data-ng-repeat="grumbl in GrumblIndexViewModel.grumbls">
+  <p><a data-ui-sref="grumblShow({id: $index})">{{grumbl.title}}</a></p>
+  <button data-ng-click="GrumblIndexViewModel.delete($index)">Have a Snickers</button>
+</div>
