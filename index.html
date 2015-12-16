@@ -1,4 +1,69 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang='en' ng-app='grumble'>
+<head>
+ <meta charset="UTF-8">
+ <title>Angular Lesson</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+ <script src="app/app.js" charset="utf-8"></script>
+ <script src="app/grumbles/grumbles.controller.js"></script>
+ <style>
+   body {
+      background-color: linen;
+  }
+
+  h1 {
+      color: maroon;
+      margin-left: 40px;
+  }
+
+  img {
+    max-width: 40%;
+  }
+</style>
+</head>
+<body>
+  <div ng-controller='grumblesController as grumblesView'>
+    <div ng-repeat="grumble in grumblesView.grumbles">
+      <!-- show the contents -->
+      <p ng-hide="editGrumble">{{$index+1}}. {{grumble.title}}</p>
+      <img ng-hide="editGrumble" ng-src="{{grumble.photo_url}}" />
+      <p ng-hide="editGrumble">{{grumble.content}}</p>
+      <!-- form to edit contents -->
+      <form ng-show="editGrumble">
+        <label>Title</label>
+        <input type="text" name="title" ng-model="grumblesView.editableContent.title">
+        <label>Author Name</label>
+        <input type="text" name="author_name" ng-model="grumblesView.editableContent.author_name">
+        <label>Content</label>
+        <input type="text" name="content" ng-model="grumblesView.editableContent.content">
+        <label>Photo URL</label>
+        <input type="text" name="photo_url" ng-model="grumblesView.editableContent.photo_url">
+        <!-- buttons to submit -->
+        <button ng-click="grumblesView.update($index); editGrumble = !editGrumble">Save</button>
+        <button ng-click="editGrumble = !editGrumble">Cancel</button>
+        <button ng-click="grumblesView.delete($index)">Delete</button>
+      </form>
+      <button ng-show="!editGrumble" ng-click="grumblesView.edit($index); editGrumble = !editGrumble">Edit Grumble</button>
+
+    </div>
+
+      <button ng-click="grumblesView.toggleForm()">Create a new gumble</button>
+      <form ng-show="grumblesView.formIsVisible" ng-submit="grumblesView.create()">
+        <label>Title</label>
+        <input type="text" name="title" ng-model="grumblesView.title">
+        <label>Author Name</label>
+        <input type="text" name="author_name" ng-model="grumblesView.author_name">
+        <label>Content</label>
+        <input type="text" name="content" ng-model="grumblesView.content">
+        <label>Photo URL</label>
+        <input type="text" name="photo_url" ng-model="grumblesView.photo_url">
+        <input type="submit" ng-click="grumblesView.toggleForm()">
+      </form>
+  </div>
+</body>
+=======
 <html>
   <head>
     <title>Angular</title>
@@ -10,4 +75,5 @@
   <body>
     <h1>Grumblr</h1>
   </body>
+>>>>>>> 0d386acb1c6240cdff9e3dabfcf189bc3b2a04cc
 </html>
