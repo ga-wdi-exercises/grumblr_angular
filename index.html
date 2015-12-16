@@ -8,6 +8,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
   </head>
   <body>
+    <div data-ui-view></div>
+<div data-ng-controller='GrumbleIndexController as grumblesViewModel'>
     <h1>Grumblr</h1>
+
+            <div data-ng-repeat="grumblr in grumblesViewModel.grumbles">
+              <p data-ng-show="!edit">{{$index}}{{grumblr}}</p>
+              <button class ="edit" data-ng-click="grumblesViewModel.edit($index); edit = !edit">Edit</button>
+              <form data-ng-show="edit">
+                <input type="text" name="content" data-ng-model="grumblesViewModel.content">
+                <button class="new" data-ng-click="grumblesViewModel.update($index); edit = !edit">Save</button>
+                <button data-ng-click='edit = !edit' class='cancel'>Cancel</button>
+              </form>
+            </div>
+
   </body>
 </html>
