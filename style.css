@@ -82,7 +82,10 @@ button{
   width: 40%;
   height: 30px;
 }
-
+a {
+  color: white;
+  text-decoration: none;
+}
 .logo{
   font-size: 30px;
   margin-right: 20px;

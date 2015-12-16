@@ -1,5 +1,11 @@
 <h2>Grumbler index</h2>
+<div>
+  <button data-ng-click="GrumbleIndexViewModel.create()">Create</button>
+  <input data-ng-model="GrumbleIndexViewModel.newGrumble.title" />
+</div>
 <div ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
+
+
 <!-- what we defined in app.js that will be passed in, just changing states -->
 <!-- first step would take to direct user  -->
 
