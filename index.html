@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
 
     <script src="js/app.js"></script>
+    <script src="js/nav/auth.directive.js"></script>
     <script src="js/grumbles/grumbles.js"></script>
     <script src="js/grumbles/index.controller.js"></script>
     <script src="js/grumbles/grumble.factory.js"></script>
@@ -18,7 +19,10 @@
     <script src="js/users/sessions.controller.js"></script>
   </head>
   <body>
-    <h1><a data-ui-sref="grumbleIndex">Grumblr</a></h1>
+    <header>
+      <h1><a data-ui-sref="grumbleIndex">Grumblr</a></h1>
+      <auth-nav></auth-nav>
+    </header>
     <main data-ui-view></main>
   </body>
 </html>
