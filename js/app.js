@@ -4,12 +4,23 @@
   angular
   .module("grumblr", [
     "ui.router",
+    "ng-token-auth",
     "grumbles"
   ])
   .config([
     "$stateProvider",
     RouterFunction
+  ])
+  .config([
+    "$authProvider",
+    AuthConfigFunction
   ]);
+
+  function AuthConfigFunction($authprovider) {
+    $authprovider.configure({
+      apiUrl: "http://localhost:3000"
+    });
+  }
 
   function RouterFunction($stateProvider){
     $stateProvider
@@ -24,6 +35,12 @@
       templateUrl: "js/grumbles/show.html",
       controller: "GrumbleShowController",
       controllerAs: "GrumbleShowViewModel"
+    })
+    .state("signin", {
+      url: "/signin",
+      templateUrl: "js/users/signin.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
     });
   }
 }());
