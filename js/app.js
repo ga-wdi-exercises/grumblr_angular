@@ -41,6 +41,11 @@
       templateUrl: "js/users/signin.html",
       controller: "SessionsController",
       controllerAs: "SessionsViewModel"
-    });
+    }).state("signout", {
+      url: "/signout",
+      templateUrl: "js/users/signout.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    });;
   }
 }());
