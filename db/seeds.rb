@@ -31,9 +31,9 @@ def comment
     "I've responded to this in my post about",
     "Didn't you know? The government is secretly controlled by"
   ]
-  prompt = HTTParty.get("http://www.ineedaprompt.com/api").parsed_response["prompt"]
-  puts prompt
-  comments.sample + " " + prompt[0,1].downcase + prompt[1..-1]
+  message = HTTParty.get("http://www.ineedaprompt.com/api").parsed_response["english"]
+  puts message
+  comments.sample + " " + message[0,1].downcase + message[1..-1]
 end
 
 names.each do |name|
