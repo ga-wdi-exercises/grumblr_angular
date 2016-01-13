@@ -8,19 +8,21 @@
   ])
   .config([
     "$stateProvider",
+    "$locationProvider",
     RouterFunction
   ]);
 
-  function RouterFunction($stateProvider){
+  function RouterFunction($stateProvider, $locationProvider){
+    $locationProvider.html5Mode(true);
     $stateProvider
     .state("grumbleIndex", {
-      url: "/grumbles",
+      url: "/",
       templateUrl: "js/grumbles/index.html",
       controller: "GrumbleIndexController",
       controllerAs: "GrumbleIndexViewModel"
     })
     .state("grumbleShow", {
-      url: "/grumbles/:id",
+      url: "/:id",
       templateUrl: "js/grumbles/show.html",
       controller: "GrumbleShowController",
       controllerAs: "GrumbleShowViewModel"
