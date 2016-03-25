@@ -14,28 +14,34 @@ Instead of juggling a bunch of branches in one repo, you'll instead just be able
 
 **Note:** The zip files do *not* include a `.git` folder, like `git clone` gives you. So if you do want to use Git inside one of the folders, you'll need to `$ git init` inside it.
 
-## Monday
+## Angular Homework
 
-Continue working on your local repository from in-class, completing
-edit, update, and delete functionality. No deliverable tonight.
+### Following UI Router's Class
 
-## Tuesday
-
-You will have forked and cloned this repository in class. Complete
-show and edit functionality with routes for show, new, and edit. 
-Submit an issue with a link to your code on this repo to turn in.
-
-## Wednesday
+<!-- TODO: Complete Starter Code for UI-Router from In Class   -->
 
 [Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.0)
 
     $ git checkout -b ui-router 1.0.0
 
+<!-- TODO: Complete Solution code with full CRUD for grumbles  -->
+
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.1)
 
     $ git checkout ui-router-solution
 
-## Thursday
+Continue working on your local copy of `grumblr` from in-class. Complete
+show and edit functionality with routes for show, new, and edit.
+
+To submit your homework, open an a pull request against this repo from your fork.
+
+### Following Factories, Services, and ngResource's Class
+
+<!-- TODO: Using starter from inclass?  -->
+<!-- TODO: Include solution for Factories hw  -->
+<!-- TODO: Is there a deliverable?  -->
+
+### Following Custom Directives' Class
 
 [Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.0)
 
@@ -44,14 +50,3 @@ Submit an issue with a link to your code on this repo to turn in.
 [Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.1)
 
     $ git checkout -b custom-directives-solution 2.0.1
-
-## Friday
-
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.0)
-
-    $ git checkout -b custom-directives-with-auth 3.0.0
-
-[Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.1)
-
-    $ git checkout -b custom-directives-with-auth-solution 3.0.1
-
