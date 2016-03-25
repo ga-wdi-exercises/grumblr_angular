@@ -6,7 +6,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
 
-    <!-- Adding our "fake" data  -->
     <script>
       var grumbles = [
         {
@@ -25,7 +24,7 @@
     <script src="js/grumbles/index.controller.js"></script>
   </head>
   <body>
-    <h1>Grumblr</h1>
+    <h1 data-ui-sref="grumbleIndex">Grumblr</h1>
     <div data-ui-view></div>
   </body>
 </html>
