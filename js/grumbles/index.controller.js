@@ -9,7 +9,6 @@
   ]);
 
   function GrumbleIndexControllerFunction( GrumbleFactory ){
-        this.grumbles = GrumbleFactory.query();
-      }
-
-  }());
+    this.grumbles = GrumbleFactory.query();
+  }
+}());
