@@ -3,13 +3,13 @@
 (function(){
   angular
   .module("grumbles")
-  .controller("GrumbleIndexController", [
+  .controller("GrumbleShowController", [
     "GrumbleFactory",
     "$stateParams",
-    GrumbleIndexControllerFunction
+    GrumbleShowControllerFunction
   ]);
 
-  function GrumbleIndexControllerFunction( GrumbleFactory, $stateParams){
+  function GrumbleShowControllerFunction( GrumbleFactory, $stateParams){
     this.grumble = GrumbleFactory.get({id: $stateParams.id});
   }
 }());
