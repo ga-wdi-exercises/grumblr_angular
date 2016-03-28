@@ -2,9 +2,9 @@
 
 ## Releases
 
-Rather than using branches to indicate the different "steps" of creating Grumblr, we're using commits. If you check out [the commits of the solution branch](https://github.com/ga-dc/grumblr_angular/commits/solution), you'll see what we mean.
+Rather than using branches to indicate the different "steps" of creating Grumblr, we're using commits. If you check out [the commits of the solution branch](https://github.com/ga-wdi-exercises/grumblr_angular/commits/solution), you'll see what we mean.
 
-The different steps can be downloaded via [Releases](https://github.com/ga-dc/grumblr_angular/releases). These are usually used to *release* different versions of an app, which is why each one has a version number: 1.0.0, 1.0.1, and so on.
+The different steps can be downloaded via [Releases](https://github.com/ga-wdi-exercises/grumblr_angular/releases). These are usually used to *release* different versions of an app, which is why each one has a version number: 1.0.0, 1.0.1, and so on.
 
 The starter code for the first Angular class is version 1.0.0. The solution code for the first class is 1.0.1. The solution code for the third class is 3.0.1.
 
@@ -18,35 +18,27 @@ Instead of juggling a bunch of branches in one repo, you'll instead just be able
 
 ### Following UI Router's Class
 
-<!-- TODO: Complete Starter Code for UI-Router from In Class   -->
-
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.0)
+[Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/1.0.0)
 
     $ git checkout -b ui-router 1.0.0
 
-<!-- TODO: Complete Solution code with full CRUD for grumbles  -->
-
-[Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.1)
+[Solution Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/1.0.1)
 
     $ git checkout ui-router-solution
 
 Continue working on your local copy of `grumblr` from in-class. Complete
-show and edit functionality with routes for show, new, and edit.
-
-To submit your homework, open an a pull request against this repo from your fork.
+show, create, edit, and delete functionality with routes for show, new, and edit.
 
 ### Following Factories, Services, and ngResource's Class
 
-<!-- TODO: Using starter from inclass?  -->
-<!-- TODO: Include solution for Factories hw  -->
-<!-- TODO: Is there a deliverable?  -->
+Continue working on your local copy of `grumblr`. Implement full CRUD for `grumbles` by replacing hard-coded data with the appropriate API calls utilizing `ngResource`
 
 ### Following Custom Directives' Class
 
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.0)
+[Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/2.0.0)
 
     $ git checkout -b custom-directives 2.0.0
 
-[Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.1)
+[Solution Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/2.0.1)
 
-    $ git checkout -b custom-directives-solution 2.0.1
+    $ git checkout custom-directives-solution 2.0.1
