@@ -16,6 +16,8 @@ Instead of juggling a bunch of branches in one repo, you'll instead just be able
 
 ## Angular Homework
 
+To submit, open up pull request against this repository from your forked copy by Thursday 3/31 by 9:00am
+
 ### Following UI Router's Class
 
 [Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/1.0.0)
@@ -27,7 +29,7 @@ Instead of juggling a bunch of branches in one repo, you'll instead just be able
     $ git checkout ui-router-solution
 
 Continue working on your local copy of `grumblr` from in-class. Complete
-show, create, edit, and delete functionality with routes for show, new, and edit.
+CRD functionality with hard-coded data.
 
 ### Following Factories, Services, and ngResource's Class
 
