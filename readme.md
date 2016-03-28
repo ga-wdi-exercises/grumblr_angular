@@ -20,6 +20,8 @@ To submit, open up pull request against this repository from your forked copy by
 
 ### Following UI Router's Class
 
+**Optional**
+
 [Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/1.0.0)
 
     $ git checkout -b ui-router 1.0.0
@@ -29,7 +31,7 @@ To submit, open up pull request against this repository from your forked copy by
     $ git checkout ui-router-solution
 
 Continue working on your local copy of `grumblr` from in-class. Complete
-CRD functionality with hard-coded data.
+CRD functionality with hard-coded data. Follow [this section](https://github.com/ga-wdi-lessons/angular-routing#you-do-show-page) in the lesson plan to the end for outlined steps
 
 ### Following Factories, Services, and ngResource's Class
 
