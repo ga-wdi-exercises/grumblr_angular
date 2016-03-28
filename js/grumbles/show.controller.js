@@ -9,7 +9,7 @@
     GrumbleShowControllerFunction
   ]);
 
-  function GrumbleShowControllerFunction( GrumbleFactory, $stateParams){
+  function GrumbleShowControllerFunction( GrumbleFactory, $stateParams ){
     this.grumble = GrumbleFactory.get({id: $stateParams.id});
   }
 }());
