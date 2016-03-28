@@ -1,5 +1,6 @@
 "use strict";
 (function(){
+  angular
   .module( "grumbles" )
   .factory( "GrumbleFactory", [
     "$resource",
