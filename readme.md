@@ -37,10 +37,12 @@ Continue working on your local copy of `grumblr`. Implement full CRUD for `grumb
 
 ### Following Custom Directives' Class
 
-[Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/2.0.0)
+Continue working on your local copy of `grumblr`. Replace repeated HTML and functionality with a `grumbleForm` directive. Use one form to handle both creating and updating.
 
-    $ git checkout -b custom-directives 2.0.0
+[Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/3.0.0)
 
-[Solution Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/2.0.1)
+    $ git checkout -b custom-directives 3.0.0
 
-    $ git checkout custom-directives-solution 2.0.1
+[Solution Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/3.0.1)
+
+    $ git checkout custom-directives-solution 3.0.1
