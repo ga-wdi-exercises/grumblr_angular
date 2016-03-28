@@ -25,7 +25,5 @@
       controller: "GrumbleShowController",
       controllerAs: "GrumbleShowViewModel"
     })
-    })
-    ;
   }
 }());
