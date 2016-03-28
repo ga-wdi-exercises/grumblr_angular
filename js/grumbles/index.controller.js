@@ -8,7 +8,8 @@
     GrumbleIndexControllerFunction
   ]);
 
-  function GrumbleIndexControllerFunction(GrumbleFactory){
-      GrumbleFactory.helloWorld();
-  }
-}());
+  function GrumbleIndexControllerFunction( GrumbleFactory ){
+        this.grumbles = GrumbleFactory.query();
+      }
+
+  }());

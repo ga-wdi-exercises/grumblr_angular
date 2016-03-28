@@ -2,13 +2,10 @@
 (function(){
   .module( "grumbles" )
   .factory( "GrumbleFactory", [
+    "$resource",
     GrumbleFactoryFunction
   ]);
-function GrumbleFactoryFunction(){
-  return {
-    helloWorld: function(){
-      console.log( "Hello world!" );
-    }
+function GrumbleFactoryFunction( $resource ){
+      return $resource( "http://localhost:3000/grumbles/:id" );
   }
-}
 }());
