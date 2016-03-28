@@ -2,9 +2,9 @@
 
 ## Releases
 
-Rather than using branches to indicate the different "steps" of creating Grumblr, we're using commits. If you check out [the commits of the solution branch](https://github.com/ga-dc/grumblr_angular/commits/solution), you'll see what we mean.
+Rather than using branches to indicate the different "steps" of creating Grumblr, we're using commits. If you check out [the commits of the solution branch](https://github.com/ga-wdi-exercises/grumblr_angular/commits/solution), you'll see what we mean.
 
-The different steps can be downloaded via [Releases](https://github.com/ga-dc/grumblr_angular/releases). These are usually used to *release* different versions of an app, which is why each one has a version number: 1.0.0, 1.0.1, and so on.
+The different steps can be downloaded via [Releases](https://github.com/ga-wdi-exercises/grumblr_angular/releases). These are usually used to *release* different versions of an app, which is why each one has a version number: 1.0.0, 1.0.1, and so on.
 
 The starter code for the first Angular class is version 1.0.0. The solution code for the first class is 1.0.1. The solution code for the third class is 3.0.1.
 
@@ -14,44 +14,37 @@ Instead of juggling a bunch of branches in one repo, you'll instead just be able
 
 **Note:** The zip files do *not* include a `.git` folder, like `git clone` gives you. So if you do want to use Git inside one of the folders, you'll need to `$ git init` inside it.
 
-## Monday
+## Angular Homework
 
-Continue working on your local repository from in-class, completing
-edit, update, and delete functionality. No deliverable tonight.
+To submit, open up pull request against this repository from your forked copy by Thursday 3/31 by 9:00am
 
-## Tuesday
+### Following UI Router's Class
 
-You will have forked and cloned this repository in class. Complete
-show and edit functionality with routes for show, new, and edit. 
-Submit an issue with a link to your code on this repo to turn in.
+**Optional**
 
-## Wednesday
-
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.0)
+[Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/1.0.0)
 
     $ git checkout -b ui-router 1.0.0
 
-[Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/1.0.1)
+[Solution Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/1.0.1)
 
     $ git checkout ui-router-solution
 
-## Thursday
+Continue working on your local copy of `grumblr` from in-class. Complete
+CRD functionality with hard-coded data. Follow [this section](https://github.com/ga-wdi-lessons/angular-routing#you-do-show-page) in the lesson plan to the end for outlined steps
 
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.0)
+### Following Factories, Services, and ngResource's Class
 
-    $ git checkout -b custom-directives 2.0.0
+Continue working on your local copy of `grumblr`. Implement full CRUD for `grumbles` by replacing hard-coded data with the appropriate API calls utilizing `ngResource`
 
-[Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/2.0.1)
+### Following Custom Directives' Class
 
-    $ git checkout -b custom-directives-solution 2.0.1
+Continue working on your local copy of `grumblr`. Replace repeated HTML and functionality with a `grumbleForm` directive. Use one form to handle both creating and updating.
 
-## Friday
+[Starter Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/3.0.0)
 
-[Starter Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.0)
+    $ git checkout -b custom-directives 3.0.0
 
-    $ git checkout -b custom-directives-with-auth 3.0.0
+[Solution Code](https://github.com/ga-wdi-exercises/grumblr_angular/releases/tag/3.0.1)
 
-[Solution Code](https://github.com/ga-dc/grumblr_angular/releases/tag/3.0.1)
-
-    $ git checkout -b custom-directives-with-auth-solution 3.0.1
-
+    $ git checkout custom-directives-solution 3.0.1
