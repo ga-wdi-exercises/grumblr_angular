@@ -1,4 +1,5 @@
 "use strict";
+
 (function(){
   angular
   .module( "grumbles" )
@@ -7,6 +8,8 @@
     GrumbleFactoryFunction
   ]);
 function GrumbleFactoryFunction( $resource ){
-      return $resource( "http://localhost:3000/grumbles/:id" );
+      return $resource( "http://localhost:3000/grumbles/:id", {},{
+        update: { method: "PUT"}
+      });
   }
 }());
