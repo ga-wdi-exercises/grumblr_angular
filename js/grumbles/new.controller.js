@@ -2,17 +2,16 @@
 
 (function(){
   angular
-  .module("grumbles")
-  .controller("GrumbleNewController", [
-    "GrumbleFactory",
-    "$stateParams",
-    GrumbleNewControllerFunction
-  ]);
+    .module( "grumbles" )
+    .controller( "GrumbleNewController", [
+      "GrumbleFactory",
+      GrumbleNewControllerFunction
+    ]);
 
-  function GrumbleNewControllerFunction( GrumbleFactory ){
-     this.grumble = new GrumbleFactory();
-     this.create = function(){
-       this.grumble.$save();
-     };
-   }
+    function GrumbleNewControllerFunction( GrumbleFactory ){
+      this.grumble = new GrumbleFactory();
+      this.create = function(){
+        this.grumble.$save()
+      }
+    }
 }());

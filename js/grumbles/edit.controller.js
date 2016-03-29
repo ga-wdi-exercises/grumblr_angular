@@ -9,10 +9,13 @@
     GrumbleEditControllerFunction
   ]);
 
-  function GrumbleEditControllerFunction( GrumbleFactory ){
-     this.grumble = update GrumbleFactory();
-     this.create = function(){
-       this.grumble.$save();
-     };
+  function GrumbleEditControllerFunction(GrumbleFactory, $stateParams){
+     this.grumble = GrumbleFactory.get({id: $stateParams.id});
+     this.update = function(){
+       this.grumble.$update({id: $stateParams.id});
+     }
+     this.destroy = function(){
+       this.grumble.$delete({id: $stateParams.id});
+     }
    }
 }());
