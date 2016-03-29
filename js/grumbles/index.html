@@ -1,0 +1,5 @@
+<h1> I'm working </h1> <!-- this is like a partial in rails. This is so that we don't have to write a lot of text inside templateURL in app.js function RouterFunction -->
+<div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
+  <!-- to print out the grumbles variable from main index.html page need to do a data-ng-repeat. GrumbleIndexViewModel comes from 'controller as' in index.html page-->
+  <p><a data-ui-sref="grumbleShow({id:$idex})">{{grumble.title}}</a></p> <!-- prints out each title. s in sref stands for state since it is a link to a state. -->
+</div>
