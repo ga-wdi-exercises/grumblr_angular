@@ -3,15 +3,15 @@
 (function(){
   angular
   .module('grumbles')
-  .directive('myCustomDirective', function(){
+  .directive('grumbleShow', function(){
     return {
-      template: '<h1>Hi there, {{myName}}! {{coolAttribute}}</h1>',
+      templateUrl: 'js/grumbles/_grumble_show.html',
       scope: {
-        coolAttribute: '@'
+        grumble: '='
       },
       link: function(scope){
-        console.log(scope.coolAttribute);
-        scope.myName = 'Slim Shady';
+        console.log(scope.grumble);
+        // scope.myName = 'Slim Shady';
       }
     }
   });

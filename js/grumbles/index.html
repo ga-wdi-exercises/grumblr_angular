@@ -1,10 +1,10 @@
 <h2>These are all the Grumbles</h2>
 
 <div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
-  <div my-custom-directive data-cool-attribute='I am a cool attribute!'></div>
-  <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
+  <div grumble-show data-grumble='grumble'></div>
+  <!-- <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
   <p>Author: {{grumble.authorName}}</p>
   <p><img data-ng-src="{{grumble.photoUrl}}"></img></p>
   <p>{{grumble.content}}</p>
-  <a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a>
+  <a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a> -->
 </div>
