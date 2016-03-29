@@ -5,15 +5,13 @@
   .module('grumbles')
   .directive('myCustomDirective', function(){
     return {
-      template: "<h1 ng-click='complementMe()'>My name is {{myName}}</h1>",
-      restrict: 'A',
-      // replace: true,
+      template: '<h1>Hi there, {{myName}}! {{coolAttribute}}</h1>',
+      scope: {
+        coolAttribute: '@'
+      },
       link: function(scope){
-        console.log('directive used');
+        console.log(scope.coolAttribute);
         scope.myName = 'Slim Shady';
-        scope.complementMe = function(){
-          alert('You’re looking good today');
-        }
       }
     }
   });
