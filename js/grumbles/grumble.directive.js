@@ -10,7 +10,7 @@
         grumble: '='
       },
       link: function(scope){
-        console.log(scope.grumble);
+        // console.log(scope.grumble);
         // scope.myName = 'Slim Shady';
       }
     }
