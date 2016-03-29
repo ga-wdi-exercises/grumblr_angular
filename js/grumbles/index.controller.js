@@ -4,10 +4,11 @@
   angular
   .module("grumbles")
   .controller("GrumbleIndexController", [
+    "GrumbleFactory",
     GrumbleIndexControllerFunction
   ]);
-  function GrumbleIndexControllerFunction(){
-    this.grumbles = "These are some grumbles";
+  function GrumbleIndexControllerFunction(GrumbleFactory){
+    this.grumbles = GrumbleFactory.query();
     console.log("im in the controller!");
   }
 }());
