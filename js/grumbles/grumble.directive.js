@@ -6,6 +6,8 @@
   .directive('myCustomDirective', function(){
     return {
       template: "<h1 ng-click='complementMe()'>My name is {{myName}}</h1>",
+      restrict: 'A',
+      // replace: true,
       link: function(scope){
         console.log('directive used');
         scope.myName = 'Slim Shady';
