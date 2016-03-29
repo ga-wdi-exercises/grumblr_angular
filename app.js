@@ -3,7 +3,8 @@
 (function(){
   angular
   .module("grumblr", [
-    "ui.router"
+    "ui.router",
+    "grumbles"
   ])
   .config([
     "$stateProvider",
