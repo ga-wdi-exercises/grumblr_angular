@@ -1,0 +1,13 @@
+<div class="grumble-form">
+  <form>
+    <input placeholder="Title" value="grumble.title" data-ng-model="grumble.title" />
+    <input placeholder="Author" value="grumble.authorName" data-ng-model="grumble.authorName" />
+    <input placeholder="Photo Url" value="grumble.photoUrl" data-ng-model="grumble.photoUrl" />
+    <textarea value="grumble.content" data-ng-model="grumble.content"></textarea>
+    <a data-ui-sref='grumbleShow({id: grumble.id})' ng-show="formType == 'edit'">Cancel</a>
+    <a data-ui-sref='grumbleIndex' ng-show="formType == 'new'">Cancel</a>
+    <button data-ng-click="grumble.create()" ng-show="formType == 'new'">Create New</button>
+    <button data-ng-click="grumble.update()" ng-show="formType == 'edit'">Save</button>
+    <button data-ng-click="grumble.destroy()" ng-show="formType == 'edit'">Delete</button>
+  </form>
+</div>
