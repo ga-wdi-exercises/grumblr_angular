@@ -3,7 +3,9 @@
 (function(){
   angular
   .module("grumblr", [
-    "ui.router"
+    "ui.router",
+    "agrumble"
+
   ])
   .config([
     "$stateProvider",
@@ -14,7 +16,11 @@
     $stateProvider
     .state("grumbleIndex", {
       url: "/grumbles",
-      template: "I'm the Grumbles index!!!"
+      templateUrl: "js/grumbles/index.html"
+    })
+    .state("grumbleShow", {
+      url: "/grumbles/:id",
+      templateUrl: "js/grumbles/show.html"
     });
   }
 })();
