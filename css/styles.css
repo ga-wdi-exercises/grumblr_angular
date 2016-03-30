@@ -1,3 +1,7 @@
 img {
   width: 300px;
 }
+
+input, textarea{
+  display:block;
+}
