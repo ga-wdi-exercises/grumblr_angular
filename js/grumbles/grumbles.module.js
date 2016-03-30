@@ -2,5 +2,5 @@
 
 (function(){
   angular
-  .module("agrumble", []);
+  .module("grumbles", []);
 })();
