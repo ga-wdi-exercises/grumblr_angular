@@ -21,13 +21,34 @@
       // url: "/grumbles" is the path I want this state to be activated at
       templateUrl: "js/grumbles/index.html", // not this link. This is creating a partial for all my html in the js/grumbles/index.html file. This is the path to that partial
       controller: "GrumbleIndexController",
-      controllerAs: "GrumbleIndexViewModel" //save this instance of a controller as... so that we can actually use the properties in the index file.
+      controllerAs: "GrumbleIndexViewModel" //save this instance of a controller as a varialbe... so that we can actually use the properties in the index file.
       // this is called GrumbleIndexViewModel because it takes things from teh model and makes it availble in the view
     })
 
-    .state("grumbleShow", { // this creates a new URl for the show page
-     url: "/grumbles/:id", // :id can be a number or word
-     templateUrl: "js/grumbles/show.html"
-     });
+    .state("grumbleEdit", {
+       url: "/grumbles/:id/edit",
+       templateUrl: "js/grumbles/edit.html",
+       controller: "GrumbleEditController",
+       controllerAs: "GrumbleEditViewModel"
+     })
+
+     .state("grumbleNew", {
+       url: "/grumbles/new",
+       templateUrl: "js/grumbles/new.html",
+       controller: "GrumbleNewController",
+       controllerAs: "GrumbleNewViewModel"
+     }) // new needs to go before :id because :id will look for anything even new. So angular needs to find new before :id.
+
+    .state("grumbleShow", {
+      url: "/grumbles/:id", //id can be a number or URL
+      templateUrl: "js/grumbles/show.html",
+      controller: "GrumbleShowController",
+      controllerAs: "GrumbleShowViewModel"
+    })
+
+
+
+
+
   }
 }()); //IIFE all of these functions will be called immediately within this function
