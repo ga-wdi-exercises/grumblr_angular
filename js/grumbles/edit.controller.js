@@ -8,7 +8,7 @@
     "$stateParams",
     EditControllerFunction
   ]);
-  function EditControllerFunction(GrumbleFactory){
+  function EditControllerFunction(GrumbleFactory, $stateParams){
     this.grumble = GrumbleFactory.get({id: $stateParams.id});
     this.update = function(){
       this.grumble.$update({id: $stateParams.id});
