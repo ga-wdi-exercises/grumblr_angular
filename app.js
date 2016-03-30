@@ -25,6 +25,12 @@
       controller: "NewController",
       controllerAs: "GrumbleNewVM"
     })
+    .state("grumbleEdit", {
+      url: "/grumbles/edit",
+      templateUrl: "js/grumbles/edit.html",
+      controller: "EditController",
+      controllerAs: "GrumbleEditVM"
+    })
     .state("grumbleShow", {
       url: "/grumbles/:id",
       templateUrl: "js/grumbles/show.html",
