@@ -1,9 +1,11 @@
 <h2>These are all the Grumbles</h2>
 
-<a data-ui-sref="grumbleNew">(add a new Grumble)</a></p>
+<h4>Add a new Grumble:
+<div data-grumble-form data-grumble="GrumbleIndexViewModel.newGrumble"></div>
+</h4>
 
   <div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
-    <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a><br/>
-    <a data-ui-sref="grumbleEdit({id: grumble.id})">(edit)</a></p>
+    <p>{{grumble.title}} – <a data-ui-sref="grumbleShow({id: grumble.id})">(update)</a></p>
+    <!-- <img src="{{grumble.photoUrl}}" /> -->
     <!-- <div class="grumble-show" data-grumble="grumble"></div> -->
 </div>
