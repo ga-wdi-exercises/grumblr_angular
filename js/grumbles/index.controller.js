@@ -1,12 +1,15 @@
+"use strict";
+
 (function(){
   angular
-    .module( "grumble" )
+    .module( "grumbles" )
     .controller( "GrumbleIndexController", [
       "GrumbleFactory",
       GrumbleIndexControllerFunction
     ]);
 
-  function GrumbleIndexControllerFunction( GrumbleFactory ){
-    GrumbleFactory.helloWorld();
-  }
-})();
+    function GrumbleIndexControllerFunction( GrumbleFactory ){
+      this.grumbles = GrumbleFactory.query();
+    }
+
+}());
