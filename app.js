@@ -19,6 +19,12 @@
       controller: "GrumbleIndexController",
       controllerAs: "GrumbleIndexVM"
     })
+    .state("grumbleNew", [
+      url: "/grumbles/new",
+      templateUrl: "js/grumbles/new.html",
+      controller: "NewController",
+      controllerAs: "GrumbleNewVM"
+    ])
     .state("grumbleShow", {
       url: "/grumbles/:id",
       templateUrl: "js/grumbles/show.html",
