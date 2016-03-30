@@ -11,6 +11,10 @@
   ]);
 
   function RouterFuntion($stateProvider){
-    
+    $stateProvider
+    .state("grumbleIndex", {
+      url: "/grumbles",
+      template: "I'm the Grumbles index!!!"
+    });
   }
 })();
