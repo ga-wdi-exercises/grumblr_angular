@@ -8,10 +8,11 @@
   ])
   .config([
     "$stateProvider",
+    "$locationProvider",
     RouterFunction
   ]);
 
-  function RouterFunction($stateProvider){
+  function RouterFunction($stateProvider, $locationProvider){
     $stateProvider
     .state("grumbleIndex", {
       url: "/grumbles",

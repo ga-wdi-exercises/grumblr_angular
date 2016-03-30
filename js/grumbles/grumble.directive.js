@@ -15,13 +15,13 @@
           grumble: '='
         },
       // any time this directive is used, this method is going to be invoked
-      link: function(scope){
-        scope.create = function(){
-          scope.grumble.$save(scope.grumble, function(grumble){
-            $state.go('grumbleShow', grumble);
-          });
-        }
-      }
+      // link: function(scope){
+      //   scope.create = function(){
+      //     scope.grumble.$save(scope.grumble, function(grumble){
+      //       $state.go('grumbleShow', grumble);
+      //     });
+      //   }
+      // }
     }
   }
 }());

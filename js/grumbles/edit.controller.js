@@ -16,6 +16,6 @@
     }
     this.destroy = function(){
       this.grumble.$delete({id: $stateParams.id});
-    }
+    };
   }
 }());

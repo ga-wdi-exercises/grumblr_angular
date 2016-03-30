@@ -3,11 +3,10 @@
   <input placeholder="Author" type='text' name='authorName' data-ng-model='grumble.authorName' />
   <textarea placeholder="Your Grumble" name='content' data-ng-model='grumble.content'></textarea>
   <input placeholder="Photo URL" type='text' name='photoUrl' data-ng-model='grumble.photoUrl'>
-  <div data-ng-show="formType == 'new'">
-    <button data-ng-click='create()'>Create</button>
-  </div>
-  <div data-ng-show="formTyle == 'edit'">
-    <a data-ui-sref="grumbleShow({id: grumble.id})">&larr; Back</a>
-    <button data-ng-click='update()'>Save</button>
+  <button type="button" data-ng-if="!grumble.id" data-ng-click="create()">Save</button>
+  <div data-ng-if="grumble.id">
+    <!-- <a data-ui-sref='grumbleShow({id: grumble.id})'>&larr; Back</a> -->
+    <button type="button" data-ng-click="update()">Update</button>
+    <button type="button" data-ng-click="delete()">Delete</button>
   </div>
 </form>
