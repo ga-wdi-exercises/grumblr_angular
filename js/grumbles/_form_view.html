@@ -1,0 +1,13 @@
+<form>
+<p>Titlte: <input placeholder="Title" data-ng-model="grumble.title"></p>
+<p>Name: <input placeholder="author" data-ng-model="grumble.authorName"></p>
+<p>Photo: <input placeholder="photo url" data-ng-model="grumble.photoUrl"></p>
+<p>content: <input placeholder="gumble content" data-ng-model="grumble.content"></p>
+<div data-ng-show="formType == 'edit'">
+  <button type="button" data-ng-click="update()">UPDATE</button>
+  <button type="button" data-ng-click="destroy()">Delete</button>
+</div>
+<div data-ng-show="formType == 'new'">
+  <button type="button" data-ng-click="create()">CREATE</button>
+</dvi>
+</form>
