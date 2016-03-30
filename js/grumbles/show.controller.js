@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-    .module("grumbler")
+    .module("grumbles")
     .controller("GrumbleShowController", [
         "GrumbleFactory",
         "$stateParams",
