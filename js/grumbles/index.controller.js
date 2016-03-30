@@ -1,18 +1,12 @@
-"use strict";
-
 (function(){
   angular
-  .module("grumbles")
-  .controller("GrumbleIndexController", [
-    GrumbleIndexControllerFunction
-  ]);
+    .module( "grumble" )
+    .controller( "GrumbleIndexController", [
+      "GrumbleFactory",
+      GrumbleIndexControllerFunction
+    ]);
 
-  function GrumbleIndexControllerFunction(){
-    this.grumbles = [
-      {title: "These"},
-      {title: "Are"},
-      {title: "Hardcoded"},
-      {title: "Grumbles"}
-    ]
+  function GrumbleIndexControllerFunction( GrumbleFactory ){
+    GrumbleFactory.helloWorld();
   }
-}());
+})();
