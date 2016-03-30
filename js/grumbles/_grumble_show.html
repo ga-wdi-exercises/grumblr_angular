@@ -1,0 +1,8 @@
+<div>
+  <!-- to print out the grumbles variable from main index.html page need to do a data-ng-repeat. GrumbleIndexViewModel comes from 'controller as' in index.html page-->
+   <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p> <!-- prints out each title from the API. s in sref stands for state since it is a link to a state. ALSO, grumbleShow is creating a link to the show page. id: is referring to the id: in the url: "/grumbles/:id"-->
+
+<button><a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a></button>
+  <!-- prints out an edit for each title -->
+  <!-- when using a partial (_grumble_show.html) make sure to put everything inside a div tag or it won't work -->
+</div>
