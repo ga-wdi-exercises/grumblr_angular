@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  -  .module("grumbles", []);
+
   .module("grumbles", [
     "ngResource"
   ]);

@@ -2,7 +2,6 @@
 
 (function(){
   angular
-
   .module( "grumbles" )
   .controller( "GrumbleIndexController", [
     // The factory is passed in as a dependency to our controller.

@@ -5,11 +5,11 @@
   .module( "grumbles" )
   .factory( "GrumbleFactory", [
     "$resource",
-    GrumbleFactoryFunction
-  ]);
+    FactoryFunction
+  ])
 
-  function GrumbleFactoryFunction($resource){
-    return $resource("http://localhost:3000/grumbles/:id", {}, {
+  function FactoryFunction( $resource ){
+    return $resource( "http://localhost:3000/grumbles/:id", {}, {
       update: { method: "PUT" }
     });
   }
