@@ -19,9 +19,16 @@
       controller: "GrumbleIndexController",
       controllerAs: "GrumbleIndexViewModel"
     })
+    .state("grumbleNew", {
+      templateUrl: "js/grumbles/new.html",
+      controller: "GrumbleNewController",
+      controllerAs: "GrumbleNewViewModel"
+    })
     .state("grumbleShow", {
       url: "/grumbles/:id",
-      templateUrl: "js/grumbles/show.html"
+      templateUrl: "js/grumbles/show.html",
+      controller: "GrumbleShowController",
+      controllerAs: "GrumbleShowViewModel"
     });
   }
 }());
