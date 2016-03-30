@@ -1,13 +1,13 @@
 <form>
-  <input type='text' name='title' data-ng-model='grumble.title'>
-  <input type='text' name='authorName' data-ng-model='grumble.authorName'>
-  <textarea name='content' data-ng-model='grumble.content'></textarea>
-  <input type='text' name='photoUrl' data-ng-model='grumble.photoUrl'>
+  <input placeholder="Title" type='text' name='title' data-ng-model='grumble.title' />
+  <input placeholder="Author" type='text' name='authorName' data-ng-model='grumble.authorName' />
+  <textarea placeholder="Your Grumble" name='content' data-ng-model='grumble.content'></textarea>
+  <input placeholder="Photo URL" type='text' name='photoUrl' data-ng-model='grumble.photoUrl'>
   <div data-ng-show="formType == 'new'">
     <button data-ng-click='create()'>Create</button>
   </div>
   <div data-ng-show="formTyle == 'edit'">
-    <a data-ui-sref='grumbleShow({id: grumble.id})'>&larr; Back</a>
+    <a data-ui-sref="grumbleShow({id: grumble.id})">&larr; Back</a>
     <button data-ng-click='update()'>Save</button>
   </div>
 </form>
