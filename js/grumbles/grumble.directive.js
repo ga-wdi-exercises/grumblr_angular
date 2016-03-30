@@ -5,11 +5,12 @@
   .module('grumbles')
   .directive('myCustomDirective', function(){
     return {
-      template: '<h1>Hi There!</h1>',
+      template: '<h1>Hi there, {{myName}}!</h1>',
+      restrict: 'E',
+      replace: true,
       link: function(scope){
         scope.myName = 'Slim Shady';
       }
     };
-
   });
 })();
