@@ -1,7 +1,3 @@
-<form>
-  <input placeholder="Title" data-ng-model="GrumbleNewViewModel.grumble.title" />
-  <input placeholder="Author name" data-ng-model="GrumbleNewViewModel.grumble.authorName" />
-  <input placeholder="Photo URL" data-ng-model="GrumbleNewViewModel.grumble.photoUrl" />
-  <textarea placeholder="Grumble content" data-ng-model="GrumbleNewViewModel.grumble.content"></textarea>
-  <button type="button" data-ng-click="GrumbleNewViewModel.create()">Create</button>
-</form>
+<div>
+  <grumble-form data-grumble='GrumbleNewViewModel.grumble'></grumble-form>
+</div>
