@@ -6,7 +6,7 @@
       return {
         templateUrl: "js/grumbles/_grumble_form.html",
         scope: {
-          grumble: "=",
+          vm: "=",
           formType: "@"
         }
       }
