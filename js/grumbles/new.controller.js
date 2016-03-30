@@ -1,9 +1,9 @@
-"use strict"
+"use strict";
 
 (function(){
   angular
   .module("grumbles")
-  .controller("GrumbleNewController", [
+  .controller("NewController", [
     "GrumbleFactory",
     NewController
   ]);
@@ -13,5 +13,4 @@
       this.grumble.$save();
     }
   }
-
-})
+}());
