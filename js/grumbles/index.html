@@ -1,0 +1,11 @@
+<a data-ui-sref="grumbleNew">Add a New Grumble</a>
+
+<div data-ng-repeat="grumble in GrumbleIndexVM.grumbles | orderBy:'-created_at'">
+  <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
+  <p><a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a>
+    <div grumble-show data-grumble="grumble"></div>
+    <!-- how would I get a button to delete a grumble from the grumble index view?
+         After I click delete on edit form view, on redirect, the old entry is still
+         there until i refresh the browser...
+    -->
+</div>
