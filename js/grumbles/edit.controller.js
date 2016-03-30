@@ -13,7 +13,9 @@
   function GrumbleEditControllerFunction( GrumbleFactory, $state, $stateParams ){
     this.grumble = GrumbleFactory.get({id: $stateParams.id});
     this.update = function(){
-      this.grumble.$update({id: $stateParams.id})
+      this.grumble.$update({id: $stateParams.id}).then(function(data) {
+        $state.go("grumbleShow", {id: data.id}, {reload: true});
+      });
     }
     this.destroy = function(){
       this.grumble.$delete({id: $stateParams.id}).then(function() {
