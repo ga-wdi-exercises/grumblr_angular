@@ -3,7 +3,7 @@
 (function(){
   angular
   .module("grumbles")
-  .controller("showController", [
+  .controller("ShowController", [
     "GrumbleFactory",
     "$stateParams",
     ShowFunction
