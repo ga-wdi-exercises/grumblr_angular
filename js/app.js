@@ -28,7 +28,7 @@
     .state("grumbleNew", {
       templateUrl: "js/grumbles/new.html",
       controller: "GrumbleNewController",
-      controllerAs: "GrumbleNewViewModel"
+      controllerAs: "GrumbleNewViewModel",
     })
     .state("grumbleShow", {
       url: "/grumbles/:id",
