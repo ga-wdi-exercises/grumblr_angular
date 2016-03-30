@@ -7,9 +7,9 @@
     "$resource",
     GrumbleFactoryFunction
   ]);
-function GrumbleFactoryFunction( $resource ){
-      return $resource( "http://localhost:3000/grumbles/:id", {},{
-        update: { method: "PUT"}
-      });
+  function GrumbleFactoryFunction( $resource ){
+    return $resource( "http://localhost:3000/grumbles/:id", {},{
+      update: { method: "PUT"}
+    });
   }
 }());
