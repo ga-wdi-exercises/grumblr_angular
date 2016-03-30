@@ -10,5 +10,8 @@
 
   function GrumbleIndexControllerFunction(GrumbleFactory){
     this.grumbles = GrumbleFactory.query();
+    // this.destroy = function(){
+    //   this.grumble.$remove({id: $stateParams.id})
+    // }
   }
 }());

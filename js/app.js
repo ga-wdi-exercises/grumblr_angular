@@ -36,12 +36,6 @@
       templateUrl: "js/grumbles/show.html",
       controller: "GrumbleShowController",
       controllerAs: "GrumbleShowViewModel"
-    })
-    .state("grumbleDestroy", {
-      url: "/grumbles/:id",
-      templateUrl: "js/grumbles/index.html",
-      controller: "GrumbleDestroyController",
-      controllerAs: "GrumbleDestroyViewModel"
     });
   }
 }());

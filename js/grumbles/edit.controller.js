@@ -14,5 +14,8 @@
     this.update = function(){
       this.grumble.$update({id: $stateParams.id})
     }
+    this.destroy = function(){
+      this.grumble.$remove({id: $stateParams.id})
+    }
   }
 }());
