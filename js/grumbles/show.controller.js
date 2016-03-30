@@ -9,6 +9,6 @@
   ]);
 
   function GrumbleShowControllerFunction($stateParams){
-    this.grumble = grumbles[$stateParams.id]
+    this.grumble = this.grumbles[$stateParams.id];
   }
 }());

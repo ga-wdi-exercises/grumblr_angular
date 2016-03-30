@@ -9,8 +9,4 @@
 <p>
 {{GrumbleIndexViewModel.newGrumble.content}}
 </p>
-<form class="">
-<input type="text" name="Title" placeholder="Your Title" data-ng-model="GrumbleIndexViewModel.newGrumble.title"></input>
-<input type="text" name="Content" placeholder="Your Content" value="" data-ng-model="GrumbleIndexViewModel.newGrumble.content"></input>
-  <button type="submit" name="button" data-ng-click="GrumbleIndexViewModel.create()">Submit</button>
-</form>
+<grumble-form grumble="GrumbleIndexViewModel.newGrumble"></grumble-form>

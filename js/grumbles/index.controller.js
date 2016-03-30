@@ -4,15 +4,18 @@
   angular
   .module("grumbles")
   .controller("GrumbleIndexController", [
+    "GrumbleFactory",
     GrumbleIndexControllerFunction
   ]);
 
-  function GrumbleIndexControllerFunction(){
-    this.grumbles = grumbles;
-    this.newGrumble = {};
+  function GrumbleIndexControllerFunction(GrumbleFactory){
+    var vm = this;
+    this.grumbles = GrumbleFactory.query();
+    this.newGrumble = new GrumbleFactory();
     this.create = function(){
-    grumbles.unshift(this.newGrumble);
-    this.newGrumble = {}
-}
+      vm.newGrumble.$save(function(){
+        $state.go('grumbleIndex',{},{reload: true})
+      })
+    }
   }
 }());
