@@ -2,5 +2,5 @@
 <h4>One day I will show all the grumbles that exist in time and space.</h4>
 <h4>Well, through time, not space.</h4>
 <div data-ng-repeat="onegrumble in GrumbleIndexViewModel.grumbles">
-  <p><a data-ui-sref="grumbleShow({id: 42})">{{onegrumble.title}}</a></p>
+  <p><a data-ui-sref="grumbleShow({id: $index})">{{onegrumble.title}}</a></p>
 </div>
