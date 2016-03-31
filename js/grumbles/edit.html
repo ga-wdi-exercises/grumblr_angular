@@ -5,5 +5,6 @@
   <input value="Author name" data-ng-model="GrumbleEditViewModel.grumble.authorName" />
   <input value="Photo URL" data-ng-model="GrumbleEditViewModel.grumble.photoUrl" />
   <textarea value="Grumble content" data-ng-model="GrumbleEditViewModel.grumble.content"></textarea>
-  <button type="button" data-ng-click="GrumbleEditViewModel.update()">Edit</button>
+  <button data-ng-click="GrumbleEditViewModel.update()">Edit</button>
+  <button data-ng-click="GrumbleEditViewModel.destroy()">Delete</button>
 </form>
