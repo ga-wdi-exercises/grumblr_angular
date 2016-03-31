@@ -14,4 +14,4 @@
       $state.go("grumbleIndex");
     };
   }
-}());
+})();
