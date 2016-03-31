@@ -30,6 +30,12 @@
       templateUrl: "js/grumbles/show.html",
       controller: "GrumbleShowController",
       controllerAs: "GrumbleShowViewModel"
+    })
+    .state("grumbleEdit", {
+      url: "/grumbles/:id",
+      templateUrl: "js/grumbles/edit.html",
+      controller: "GrumbleEditController",
+      controllerAs: "GrumbleEditViewModel"
     });
   }
 }());
