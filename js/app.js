@@ -33,7 +33,7 @@
     })
     .state("grumbleEdit", {
       url: "/grumbles/:id/edit",
-      templateUrl: "js/grumbles/edit.html",
+      templateUrl: "js/grumbles/_grumble_form.html",
       controller: "GrumbleEditController",
       controllerAs: "GrumbleEditViewModel"
     });
