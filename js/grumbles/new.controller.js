@@ -11,8 +11,5 @@
 
     function GrumbleNewControllerFunction( GrumbleFactory, $stateParams ){
       this.grumble = new GrumbleFactory();
-      this.create = function(){
-        this.grumble.$save()
-      }
     }
 }());
