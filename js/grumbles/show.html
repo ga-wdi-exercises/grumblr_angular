@@ -1,0 +1,7 @@
+<h3>This is a Grumble...</h3>
+<h3>"{{GrumbleShowViewModel.grumble.title}}"</h3>
+<p><dfn>Author:</dfn> {{GrumbleShowViewModel.grumble.authorName}}</p>
+<p><dfn>Created:</dfn> {{GrumbleShowViewModel.grumble.created_at}}</p>
+<blockquote>"{{GrumbleShowViewModel.grumble.content}}"</blockquote>
+<img data-ng-src="{{GrumbleShowViewModel.grumble.photoUrl}}" src="#" alt="{{GrumbleShowViewModel.grumble.title}}"/>
+<button type="button">Edit<a data-ui-sref="grumbleEdit({id: grumble.id})"></button>
