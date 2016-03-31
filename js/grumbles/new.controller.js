@@ -8,7 +8,7 @@
       GrumbleNewControllerFunction
     ]);
 
-    function GrumbleNewControllerFunction( GrumbleFactory ){
+    function GrumbleNewControllerFunction(GrumbleFactory){
       this.grumble = new GrumbleFactory();
       this.create = function(){
         this.grumble.$save()
