@@ -19,12 +19,6 @@
       controller: "GrumbleIndexController",
       controllerAs: "GrumbleIndexViewModel"
     })
-    .state("grumbleEdit", {
-      url: "/grumbles/:id",
-      templateUrl: "js/grumbles/edit.html",
-      controller: "GrumbleEditController",
-      controllerAs: "GrumbleEditViewModel"
-    })
     .state("grumbleNew", {
       templateUrl: "js/grumbles/new.html",
       controller: "GrumbleNewController",
@@ -35,6 +29,12 @@
       templateUrl: "js/grumbles/show.html",
       controller: "GrumbleShowController",
       controllerAs: "GrumbleShowViewModel"
+    })
+    .state("grumbleEdit", {
+      url: "/grumbles/:id",
+      templateUrl: "js/grumbles/edit.html",
+      controller: "GrumbleEditController",
+      controllerAs: "GrumbleEditViewModel"
     });
   }
 }());
