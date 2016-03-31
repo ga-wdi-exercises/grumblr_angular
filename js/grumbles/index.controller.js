@@ -4,14 +4,11 @@
   angular
   .module("grumbles")
   .controller("GrumbleIndexController", [
-    "$state",
+    "GrumbleFactory",
     GrumbleIndexControllerFunction
   ]);
 
-  function GrumbleIndexControllerFunction($state){
-    this.grumbles = grumbles;
-    this.goToIndex = function(){
-      $state.go("grumbleIndex")
-    }
+  function GrumbleIndexControllerFunction(GrumbleFactory){
+    this.grumbles = GrumbleFactory.query();
   }
 })();
