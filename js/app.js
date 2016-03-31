@@ -16,7 +16,8 @@
     .state("grumbleIndex", {
       url: "/grumbles",
       templateUrl: "js/grumbles/index.html",
-      controller: "GrumblesIndexController"
+      controller: "GrumbleIndexController",
+      controllerAs: "GrumbleIndexViewModel"
     })
     .state("grumbleShow", {
       url: "/grumbles/:id",

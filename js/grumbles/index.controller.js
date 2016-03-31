@@ -3,11 +3,15 @@
 (function(){
   angular
   .module("grumbles")
-  .controller("GrumblesIndexController", [
-    GrumblesIndexControllerFunction
+  .controller("GrumbleIndexController", [
+    "$state",
+    GrumbleIndexControllerFunction
   ]);
 
-  function GrumblesIndexControllerFunction(){
-    console.log("I'm in the controller!")
+  function GrumbleIndexControllerFunction($state){
+    this.grumbles = grumbles;
+    this.goToIndex = function(){
+      $state.go("grumbleIndex")
+    }
   }
 })();
