@@ -1,5 +1,7 @@
-<h1>I'm the Grumbles Index!</h1>
+<a data-ui-sref="grumbleNew">New Grumble</a>
+<h1>These are all the Grumbles</h1>
 
-<div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
-  <p> <a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a></p>
+<div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles | orderBy: '-created_at'">
+  <p> <a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
+  <a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a>
 </div>
