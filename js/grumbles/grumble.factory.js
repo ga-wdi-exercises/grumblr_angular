@@ -1,19 +1,17 @@
+
 "use strict";
 
 (function(){
   angular
-    .module( "grumbles" )
-    .factory( "GrumbleFactory", [
-      "$resource",
-      FactoryFunction
-    ])
+  .module("grumbles")
+  .factory("GrumbleFactory", [
+    "$resource",
+    GrumbleFactoryFunction
+  ]);
 
-  // function FactoryFunction( $resource ){
-  //   return $resource( "http://localhost:3000/grumbles/:id", {}, {
-  //     update: { method: "PUT" }
-  //   });
-  // }
-  function FactoryFunction( $resource ){
-    return $resource( "http://localhost:3000/grumbles/:id" );
+  function GrumbleFactoryFunction($resource){
+    return $resource("http://localhost:3000/grumbles/:id", {}, {
+      update: {method: "PUT"}
+    });
   }
 }());
