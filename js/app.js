@@ -15,7 +15,8 @@
     $stateProvider
     .state("grumbleIndex", {
       url: "/grumbles",
-      templateUrl: "js/grumbles/index.html"
+      templateUrl: "js/grumbles/index.html",
+      controller: "GrumblesIndexController"
     })
     .state("grumbleShow", {
       url: "/grumbles/:id",
