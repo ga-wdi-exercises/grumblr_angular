@@ -2,14 +2,13 @@
 
 (function(){
   angular
-  .module('grumbles')
-  .directive('myCustomDirective', function(){
+  .module("grumbles")
+  .directive("grumbleShow", function(){
     return {
-      template: '<h1>Hi there, {{myName}}!</h1>',
-      restrict: 'E',
+      templateUrl: 'js/grumbles/_grumble_show.html',
       replace: true,
-      link: function(scope){
-        scope.myName = 'Slim Shady';
+      scope: {
+        grumble: '='
       }
     };
   });
