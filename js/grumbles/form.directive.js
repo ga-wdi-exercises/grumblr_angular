@@ -2,7 +2,7 @@
 (function(){
   angular
   .module('grumbles')
-  .directive('grumbleForm', function(){
+  .directive('grumbleForm', ['$state', function($state){
     return {
       templateUrl: 'js/grumbles/_grumble_form.html',
       replace: true,
@@ -16,7 +16,12 @@
             $state.go('/grumbles/' + grumble.id);
           });
         }
+        scope.update = function(){
+          scope.grumble.$update(scope.grumble, function(grumble) {
+            $state.go('grumbleShow', {id:grumble.id});
+          });
+        }
       }
     }
-  });
+  }]);
 })();
