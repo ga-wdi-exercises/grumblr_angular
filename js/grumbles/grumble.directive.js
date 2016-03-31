@@ -12,15 +12,15 @@
         grumble: '='
       }
     };
+  })
+  .directive("grumbleForm", function(){
+    return{
+      templateUrl:"js/grumbles/_grumble_form.html",
+      replace: false,
+      scope: {
+        grumble: '=',
+        model: '='
+      }
+    };
   });
-  // .directive("grumbleForm", function(){
-  //   return{
-  //     templateUrl:"js/grumbles/_grumble_form.html",
-  //     replace: false,
-  //     scope: {
-  //       grumble: '=',
-  //       model: '='
-  //     }
-  //   };
-  // });
 })();
