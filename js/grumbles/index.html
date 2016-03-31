@@ -3,4 +3,5 @@
 <h2>I'm the Grumbles index!</h2>
 <div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles | orderBy:'-created_at'">
   <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
+  <a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a>
 </div>
