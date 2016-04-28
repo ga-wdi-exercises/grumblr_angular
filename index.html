@@ -21,6 +21,10 @@
             .state("grumbleIndex", {
               url: "/grumbles",
               template: "<h1>Grumble Index</h1>"
+            })
+            .state("grumbleShow", {
+              url: "/grumbles/:id",
+              template: "<h1>Grumble Show</h1>"
             });
         }
 
@@ -30,6 +34,7 @@
   <body data-ng-app="app">
     <h1>Grumblr</h1>
     <a data-ui-sref="grumbleIndex">Grumbles Index</a>
+    <a data-ui-sref="grumbleShow">Grumbles Show</a>
     <div data-ui-view></div>
   </body>
 </html>
