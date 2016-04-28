@@ -1,2 +1,5 @@
-<h1>Grumble Index</h1>
-<p>index stuff from file</p>
+<h2>I'm the Grumbles index!</h2>
+<div data-ng-repeat="grumble in indexVm.grumbles">
+  <p>
+    <a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a> </p>
+</div>

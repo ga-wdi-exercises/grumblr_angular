@@ -14,18 +14,35 @@
           .config([
             "$stateProvider",
             RouterFunction
-          ]);
+          ])
+          .controller("GrumbleIndexController", GrumbleIndexController)
 
         function RouterFunction($stateProvider) {
           $stateProvider
             .state("grumbleIndex", {
               url: "/grumbles",
-              templateUrl: "js/index.html"
+              templateUrl: "js/index.html",
+              controller: "GrumbleIndexController",
+              controllerAs: "indexVm"
             })
             .state("grumbleShow", {
               url: "/grumbles/:id",
               templateUrl: "js/show.html"
             });
+        }
+
+        var grumbles = [
+          {
+            title: "I am Grumble One"
+          },
+          {
+            title: "I'm another Grumble"
+          }
+        ]
+
+        function GrumbleIndexController() {
+          var indexVm = this;
+          indexVm.grumbles = grumbles;
         }
 
       })();
