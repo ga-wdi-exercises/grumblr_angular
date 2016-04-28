@@ -14,14 +14,22 @@
           .config([
             "$stateProvider",
             RouterFunction
-          ])
+          ]);
+
+        function RouterFunction($stateProvider) {
+          $stateProvider
+            .state("grumbleIndex", {
+              url: "/grumbles",
+              template: "<h1>Grumble Index</h1>"
+            });
+        }
 
       })();
     </script>
   </head>
   <body data-ng-app="app">
     <h1>Grumblr</h1>
-    angular expression to see if angular is working:
-    {{ 2+2 }}
+    <a data-ui-sref="grumbleIndex">Grumbles Index</a>
+    <div data-ui-view></div>
   </body>
 </html>
