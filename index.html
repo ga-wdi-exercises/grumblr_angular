@@ -15,7 +15,8 @@
             "$stateProvider",
             RouterFunction
           ])
-          .controller("GrumbleIndexController", GrumbleIndexController)
+          .controller("GrumbleIndexController", GrumbleIndexControllerFunc)
+          .controller("GrumbleShowController", GrumbleShowControllerFunc)
 
         function RouterFunction($stateProvider) {
           $stateProvider
@@ -27,7 +28,9 @@
             })
             .state("grumbleShow", {
               url: "/grumbles/:id",
-              templateUrl: "js/show.html"
+              templateUrl: "js/show.html",
+              controller: "GrumbleShowController",
+              controllerAs: "showVm"
             });
         }
 
@@ -40,10 +43,16 @@
           }
         ]
 
-        function GrumbleIndexController() {
+        function GrumbleIndexControllerFunc() {
           var indexVm = this;
           indexVm.grumbles = grumbles;
         }
+
+        GrumbleShowControllerFunc.$inject = [ "$stateParams" ];
+        function GrumbleShowControllerFunc($stateParams) {
+          var showVm = this;
+          showVm.grumble = grumbles[$stateParams.id];
+        };
 
       })();
     </script>
