@@ -46,6 +46,12 @@
         function GrumbleIndexControllerFunc() {
           var indexVm = this;
           indexVm.grumbles = grumbles;
+          indexVm.newGrumble = "";
+
+          indexVm.create = function(){
+            grumbles.unshift({title: indexVm.newGrumble});
+            indexVm.newGrumble = "";
+          };
         }
 
         GrumbleShowControllerFunc.$inject = [ "$stateParams" ];

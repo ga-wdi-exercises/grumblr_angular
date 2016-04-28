@@ -1,5 +1,12 @@
 <h2>I'm the Grumbles index!</h2>
+
+<!-- Create grumble -->
+<button data-ng-hide="newGrumble" data-ng-click="newGrumble = !newGrumble">New grumble</button>
+<form data-ng-show="newGrumble" data-ng-submit="indexVm.create(); newGrumble = !newGrumble">
+  <label>Title</label>
+  <input type="text" name="newGrumble" data-ng-model="indexVm.newGrumble">
+</form>
+
 <div data-ng-repeat="grumble in indexVm.grumbles">
-  <p>
-    <a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a> </p>
+  <p><a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a></p>
 </div>
