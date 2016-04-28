@@ -20,11 +20,11 @@
           $stateProvider
             .state("grumbleIndex", {
               url: "/grumbles",
-              template: "<h1>Grumble Index</h1>"
+              templateUrl: "js/index.html"
             })
             .state("grumbleShow", {
               url: "/grumbles/:id",
-              template: "<h1>Grumble Show</h1>"
+              templateUrl: "js/show.html"
             });
         }
 
