@@ -57,7 +57,15 @@
         GrumbleShowControllerFunc.$inject = [ "$stateParams" ];
         function GrumbleShowControllerFunc($stateParams) {
           var showVm = this;
-          showVm.grumble = grumbles[$stateParams.id];
+          showVm.grumble = grumbles[$stateParams.id].title;
+
+          showVm.update = function() {
+            grumbles[$stateParams.id].title = showVm.grumble;
+          };
+
+          showVm.delete = function() {
+            grumbles.splice( $stateParams.id, 1 );
+          }
         };
 
       })();
