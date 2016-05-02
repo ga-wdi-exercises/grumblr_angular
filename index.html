@@ -9,7 +9,8 @@
       (function() {
         angular
           .module("app", [
-            "ui.router"
+            "ui.router",
+            "ngResource"
           ])
           .config([
             "$stateProvider",
@@ -34,18 +35,10 @@
             });
         }
 
-        var grumbles = [
-          {
-            title: "I am Grumble One"
-          },
-          {
-            title: "I'm another Grumble"
-          }
-        ]
-
-        function GrumbleIndexControllerFunc($http) {
+        GrumbleIndexControllerFunc.$inject = [ "$resource" ];
+        function GrumbleIndexControllerFunc($resource) {
           var indexVm = this;
-          indexVm.grumbles = grumbles;
+          indexVm.grumbles = $resource("http://localhost:3000/grumbles").query();
           indexVm.newGrumble = "";
 
           indexVm.create = function(){
@@ -53,18 +46,6 @@
             indexVm.newGrumble = "";
           };
 
-          indexVm.queryApi = function() {
-            var url = "http://localhost:3000/grumbles"
-            console.log(indexVm.grumbles);
-
-            $http.get(url)
-            .then(function(res) {
-              res.data.forEach( function(item) {
-                indexVm.grumbles.push(item);
-              });
-              console.log(indexVm.grumbles);
-            })
-          }
         }
 
         GrumbleShowControllerFunc.$inject = [ "$stateParams" ];
@@ -87,7 +68,6 @@
   <body data-ng-app="app">
     <h1>Grumblr</h1>
     <a data-ui-sref="grumbleIndex">Grumbles Index</a>
-    <a data-ui-sref="grumbleShow">Grumbles Show</a>
     <div data-ui-view></div>
   </body>
 </html>
