@@ -11,5 +11,5 @@
 </form>
 
 <div data-ng-repeat="grumble in indexVm.grumbles">
-  <p><a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a></p>
+  <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
 </div>

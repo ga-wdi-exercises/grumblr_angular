@@ -1,5 +1,10 @@
 <h1>Grumble Show</h1>
-<h2>{{showVm.grumble}}</h2>
+<h2>{{showVm.grumble.title}}</h2>
+
+Author: <p>{{showVm.grumble.authorName}}</p>
+<img data-ng-src="{{showVm.grumble.photoUrl}}"></img>
+
+<p>{{showVm.grumble.content}}</p>
 
 <button data-ng-hide="editGrumble" data-ng-click="editGrumble = !editGrumble">Edit grumble</button>
 <form data-ng-show="editGrumble">

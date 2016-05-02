@@ -43,7 +43,7 @@
 
 
         GrumbleIndexControllerFunc.$inject = [ "GrumbleFactory" ];
-        function GrumbleIndexControllerFunc(GrumbleFactory) {
+          function GrumbleIndexControllerFunc(GrumbleFactory) {
           var indexVm = this;
           indexVm.grumbles = GrumbleFactory.query();
           indexVm.newGrumble = new GrumbleFactory();
@@ -56,17 +56,17 @@
 
         }
 
-        GrumbleShowControllerFunc.$inject = [ "$stateParams" ];
-        function GrumbleShowControllerFunc($stateParams) {
+        GrumbleShowControllerFunc.$inject = [ "GrumbleFactory", "$stateParams" ];
+        function GrumbleShowControllerFunc(GrumbleFactory, $stateParams) {
           var showVm = this;
-          showVm.grumble = grumbles[$stateParams.id].title;
+          showVm.grumble = GrumbleFactory.get({id: $stateParams.id});
 
           showVm.update = function() {
             grumbles[$stateParams.id].title = showVm.grumble;
           };
 
           showVm.delete = function() {
-            grumbles.splice( $stateParams.id, 1 );
+            showVm.grumble.$delete({id: $stateParams.id} );
           }
         };
 
