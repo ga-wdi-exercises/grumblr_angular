@@ -6,20 +6,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <script src="js/grumbles.module.js"></script>
+    <script src="js/grumble.factory.js"></script>
+    <script src="js/index.controller.js"></script>
+    <script src="js/show.controller.js"></script>
     <script>
       (function() {
         angular
           .module("app", [
             "ui.router",
-            "ngResource"
+            "ngResource",
+            "grumbles"
           ])
           .config([
             "$stateProvider",
             RouterFunction
           ])
-          .controller("GrumbleIndexController", GrumbleIndexControllerFunc)
-          .controller("GrumbleShowController", GrumbleShowControllerFunc)
-          .factory("GrumbleFactory", GrumbleFactoryFunc);
 
         function RouterFunction($stateProvider) {
           $stateProvider
@@ -36,42 +38,6 @@
               controllerAs: "showVm"
             });
         }
-
-        GrumbleFactoryFunc.$inject = [ "$resource" ];
-        function GrumbleFactoryFunc($resource) {
-          return $resource("http://localhost:3000/grumbles/:id", {}, {
-            update: { method: "PUT" }
-          });
-        }
-
-
-        GrumbleIndexControllerFunc.$inject = [ "GrumbleFactory" ];
-          function GrumbleIndexControllerFunc(GrumbleFactory) {
-          var indexVm = this;
-          indexVm.grumbles = GrumbleFactory.query();
-          indexVm.newGrumble = new GrumbleFactory();
-
-          indexVm.create = function($state){
-            indexVm.newGrumble.$save().then(function(res) {
-              indexVm.grumbles.push(res)
-            })
-          };
-
-        }
-
-        GrumbleShowControllerFunc.$inject = [ "GrumbleFactory", "$stateParams" ];
-        function GrumbleShowControllerFunc(GrumbleFactory, $stateParams) {
-          var showVm = this;
-          showVm.grumble = GrumbleFactory.get({id: $stateParams.id});
-
-          showVm.update = function() {
-            showVm.grumble.$update({id: $stateParams.id});
-          };
-
-          showVm.delete = function() {
-            showVm.grumble.$delete({id: $stateParams.id} );
-          }
-        };
 
       })();
     </script>
