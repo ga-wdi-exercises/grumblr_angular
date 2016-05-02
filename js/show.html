@@ -8,8 +8,10 @@ Author: <p>{{showVm.grumble.authorName}}</p>
 
 <button data-ng-hide="editGrumble" data-ng-click="editGrumble = !editGrumble">Edit grumble</button>
 <form data-ng-show="editGrumble">
-  <label>Title</label>
-  <input type="text" name="newGrumble" data-ng-model="showVm.grumble">
+  <input value="showVm.grumble.title" data-ng-model="showVm.grumble.title" />
+  <input value="showVm.grumble.authorName" data-ng-model="showVm.grumble.authorName" />
+  <input value="showVm.grumble.photoUrl" data-ng-model="showVm.grumble.photoUrl" />
+  <textarea value="showVm.grumble.content" data-ng-model="showVm.grumble.content"></textarea>
   <button class="update" data-ng-click="showVm.update(); editGrumble = !editGrumble">Save</button>
   <button data-ng-click='editGrumble = !editGrumble' class='cancel'>Cancel</button>
   <button class="delete" data-ui-sref="grumbleIndex" data-ng-click="showVm.delete()">Delete</button>

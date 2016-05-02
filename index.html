@@ -39,7 +39,9 @@
 
         GrumbleFactoryFunc.$inject = [ "$resource" ];
         function GrumbleFactoryFunc($resource) {
-          return $resource("http://localhost:3000/grumbles/:id");
+          return $resource("http://localhost:3000/grumbles/:id", {}, {
+            update: { method: "PUT" }
+          });
         }
 
 
@@ -63,7 +65,7 @@
           showVm.grumble = GrumbleFactory.get({id: $stateParams.id});
 
           showVm.update = function() {
-            grumbles[$stateParams.id].title = showVm.grumble;
+            showVm.grumble.$update({id: $stateParams.id});
           };
 
           showVm.delete = function() {
