@@ -43,7 +43,7 @@
           }
         ]
 
-        function GrumbleIndexControllerFunc() {
+        function GrumbleIndexControllerFunc($http) {
           var indexVm = this;
           indexVm.grumbles = grumbles;
           indexVm.newGrumble = "";
@@ -52,6 +52,19 @@
             grumbles.unshift({title: indexVm.newGrumble});
             indexVm.newGrumble = "";
           };
+
+          indexVm.queryApi = function() {
+            var url = "http://localhost:3000/grumbles"
+            console.log(indexVm.grumbles);
+
+            $http.get(url)
+            .then(function(res) {
+              res.data.forEach( function(item) {
+                indexVm.grumbles.push(item);
+              });
+              console.log(indexVm.grumbles);
+            })
+          }
         }
 
         GrumbleShowControllerFunc.$inject = [ "$stateParams" ];
