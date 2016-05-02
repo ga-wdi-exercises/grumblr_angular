@@ -37,19 +37,21 @@
         }
 
         GrumbleFactoryFunc.$inject = [ "$resource" ];
-        function GrumbleFactoryFunc($resouce) {
-          return $resouce("http://localhost:3000/grumbles/:id");
+        function GrumbleFactoryFunc($resource) {
+          return $resource("http://localhost:3000/grumbles/:id");
         }
 
-        GrumbleIndexController.$inject = [ "GrumbleFactory" ];
+
+        GrumbleIndexControllerFunc.$inject = [ "GrumbleFactory" ];
         function GrumbleIndexControllerFunc(GrumbleFactory) {
           var indexVm = this;
           indexVm.grumbles = GrumbleFactory.query();
-          indexVm.newGrumble = "";
+          indexVm.newGrumble = new GrumbleFactory();
 
-          indexVm.create = function(){
-            grumbles.unshift({title: indexVm.newGrumble});
-            indexVm.newGrumble = "";
+          indexVm.create = function($state){
+            indexVm.newGrumble.$save().then(function(res) {
+              indexVm.grumbles.push(res)
+            })
           };
 
         }

@@ -3,8 +3,11 @@
 <!-- Create grumble -->
 <button data-ng-hide="newGrumble" data-ng-click="newGrumble = !newGrumble">New grumble</button>
 <form data-ng-show="newGrumble" data-ng-submit="indexVm.create(); newGrumble = !newGrumble">
-  <label>Title</label>
-  <input type="text" name="newGrumble" data-ng-model="indexVm.newGrumble">
+  <input placeholder="Title" data-ng-model="indexVm.newGrumble.title" />
+  <input placeholder="Author name" data-ng-model="indexVm.newGrumble.authorName" />
+  <input placeholder="Photo URL" data-ng-model="indexVm.newGrumble.photoUrl" />
+  <textarea placeholder="Grumble content" data-ng-model="indexVm.newGrumble.content"></textarea>
+  <button type="submit">Create</button>
 </form>
 
 <div data-ng-repeat="grumble in indexVm.grumbles">
