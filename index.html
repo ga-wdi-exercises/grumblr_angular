@@ -18,6 +18,7 @@
           ])
           .controller("GrumbleIndexController", GrumbleIndexControllerFunc)
           .controller("GrumbleShowController", GrumbleShowControllerFunc)
+          .factory("GrumbleFactory", GrumbleFactoryFunc);
 
         function RouterFunction($stateProvider) {
           $stateProvider
@@ -35,10 +36,15 @@
             });
         }
 
-        GrumbleIndexControllerFunc.$inject = [ "$resource" ];
-        function GrumbleIndexControllerFunc($resource) {
+        GrumbleFactoryFunc.$inject = [ "$resource" ];
+        function GrumbleFactoryFunc($resouce) {
+          return $resouce("http://localhost:3000/grumbles/:id");
+        }
+
+        GrumbleIndexController.$inject = [ "GrumbleFactory" ];
+        function GrumbleIndexControllerFunc(GrumbleFactory) {
           var indexVm = this;
-          indexVm.grumbles = $resource("http://localhost:3000/grumbles").query();
+          indexVm.grumbles = GrumbleFactory.query();
           indexVm.newGrumble = "";
 
           indexVm.create = function(){
