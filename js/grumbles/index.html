@@ -1,5 +1,16 @@
 <h2>These are all the Grumbles</h2>
 
 <div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
-  <p>{{grumble.title}}</p>
+  <a data-ui-sref="grumbleShow({id: grumble.$id})">{{grumble.title}}</a>
+  <button data-ng-click="GrumbleIndexViewModel.delete(grumble)">Delete Grumble</button>
 </div>
+
+<h2>Create Grumble</h2>
+
+<form data-ng-submit="GrumbleIndexViewModel.create()">
+  <input placeholder="Title" data-ng-model="GrumbleIndexViewModel.newGrumble.title">
+  <input placeholder="Author" data-ng-model="GrumbleIndexViewModel.newGrumble.authorName">
+  <input placeholder="Content" data-ng-model="GrumbleIndexViewModel.newGrumble.content">
+  <input placeholder="Photo URL" data-ng-model="GrumbleIndexViewModel.newGrumble.photoUrl">
+  <button type="submit">Create Grumble</button>
+</form>

@@ -21,7 +21,9 @@
     })
     .state("grumbleShow", {
       url: "/grumbles/:id",
-      templateUrl: "js/grumbles/show.html"
+      templateUrl: "js/grumbles/show.html",
+      controller: "GrumbleShowController",
+      controllerAs: "GrumbleShowViewModel"
     });
   }
 }());
