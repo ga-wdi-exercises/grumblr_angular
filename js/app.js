@@ -8,6 +8,7 @@ function Router($stateProvider){
   .state("grumbleIndex", {
     url: "/grumbles",
     controller: "GrumbleIndexController",
-    controllerAs: "GrumbleIndexViewModel"
+    controllerAs: "GrumbleIndexViewModel",
+    templateUrl: "js/grumbles/index.html"
   });
 }
