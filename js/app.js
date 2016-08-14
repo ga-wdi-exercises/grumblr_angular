@@ -2,7 +2,7 @@
 
 
 (function(){
-  angular.module("grumblr", ["ui.router"])
+  angular.module("grumblr", ['ui.router'])
   .config(["$stateProvider", Router])
   .controller("GrumbleIndexController", [GrumbleIndexControllerFunction])
   .controller("GrumbleShowController", ["$stateParams", GrumbleShowControllerFunction])
@@ -26,9 +26,18 @@
 
   function GrumbleIndexControllerFunction(){
 
+    console.log("index")
     this.grumbles = grumbles;
-
+    this.newGrumble = {};
+    this.create = function(){
+      grumbles.unshift(this.newGrumble);
+      this.newGrumble = {}
+    }
+    this.delete = function(id){
+      grumbles.splice(id, 1);
+    }
   }
+
 
   function GrumbleShowControllerFunction($stateParams){
 
