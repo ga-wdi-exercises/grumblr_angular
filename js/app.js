@@ -9,6 +9,12 @@ angular.module("grumblr", ["ui.router"]).config(["$stateProvider", Router])
         controllerAs: "GrumbleIndexViewModel",
         templateUrl: "js/grumbles/index.html"
       })
+      .state("grumbleNew", {
+        url: "/grumbles/new",
+        controller: "GrumbleNewController",
+        controllerAs: "GrumbleNewViewModel",
+        templateUrl: "js/grumbles/new.html"
+      })
       .state("grumbleShow", {
         url: "/grumbles/:id",
         controller: "GrumbleShowController",
