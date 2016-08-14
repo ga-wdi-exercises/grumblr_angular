@@ -1,0 +1,6 @@
+<h1>I'm The Grumbles Index</h1>
+<div data-ng-repeat="grumble in vm.grumbles">
+  <p>
+    <a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a>
+  </p>
+</div>
