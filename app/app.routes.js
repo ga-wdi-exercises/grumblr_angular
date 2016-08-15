@@ -1,7 +1,10 @@
 var app = angular.module('myAppRouter',['ui.router'])
-.config(["$stateProvider", Router])
-function Router($stateProvider){
-    console.log('Working')
+.config([
+    "$stateProvider",
+    "$locationProvider",
+    Router])
+function Router($stateProvider, $locationProvider){
+    $locationProvider.html5Mode(true);
     $stateProvider
     .state("grumbleIndex", {
         url:"/grumbles",
