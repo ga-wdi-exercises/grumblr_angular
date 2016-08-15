@@ -9,5 +9,23 @@
   </head>
   <body>
     <h1>Grumblr</h1>
+    <script>
+      var grumbles = [
+        {
+          title: "I am Grumble One"
+        },
+        {
+          title: "I'm another Grumble"
+        }
+      ]
+    </script>
+    <script src="js/app.js"></script>
+    <script src='js/grumbles/index.controller.js'></script>
+    <script src="js/grumbles/show.controller.js"></script>
+  </head>
+  <body ng-app='grumblr'>
+    <div ui-view></div>
+    <h1><a data-ui-sref="grumbleIndex"></a></h1>
+
   </body>
 </html>
