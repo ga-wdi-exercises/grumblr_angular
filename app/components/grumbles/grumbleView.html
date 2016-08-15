@@ -3,3 +3,7 @@
     <p><a data-ui-sref="grumbleShow ({id: $index})">{{grumble.title}}</a></p>
 </div>
 <p><a data-ui-sref="grumbleNew">New Grumble</a></p>
+<div>
+  <button data-ng-click="GrumbleIndexViewModel.create()">Create</button>
+  <input data-ng-model="GrumbleIndexViewModel.newGrumble.title" />
+</div>
