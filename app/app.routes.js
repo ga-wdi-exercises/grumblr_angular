@@ -15,4 +15,10 @@ function Router($stateProvider){
         controllerAs:"GrumbleShowViewModel",
         templateUrl: "app/components/grumbles/grumbleShow.html"
     })
+    .state("grumbleNew", {
+        url:"/grumbles/new",
+        controller:"GrumbleNewController",
+        controllerAs:"GrumbleNewViewModel",
+        templateUrl:"app/components/grumbles/grumbleNew.html"
+    })
 }
