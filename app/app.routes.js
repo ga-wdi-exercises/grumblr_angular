@@ -8,5 +8,11 @@ function Router($stateProvider){
         controller: "GrumbleIndexController",
         controllerAs:"GrumbleIndexViewModel",
         templateUrl: "app/components/grumbles/grumbleView.html"
-    });
+    })
+    .state("grumbleShow", {
+        url:"/grumbles/:id",
+        controller:"GrumbleShowController",
+        controllerAs:"GrumbleShowViewModel",
+        templateUrl: "app/components/grumbles/grumbleShow.html"
+    })
 }
