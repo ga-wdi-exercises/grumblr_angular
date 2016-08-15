@@ -1,4 +1,5 @@
 'use strict';
 (function(){
-    angular.module("grumblr",['myAppRouter'])
+    angular
+    .module("grumblr",['myAppRouter'])
 })()
