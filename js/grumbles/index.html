@@ -1,0 +1,4 @@
+<h2>You're in the Grumbles index now.</h2>
+<div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles">
+  <p><a data-ui-sref="grumbleShow({id: $index})">{{grumble.body}}</a></p>
+</div>
