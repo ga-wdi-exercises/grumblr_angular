@@ -1,24 +1,35 @@
 "use strict";
 
 (function(){
-  angular.module("grumblr", [
+  angular
+  .module("grumblr", [
     "ui.router",
     "grumbles"
   ])
   .config([
     "$stateProvider",
-    "$locationProvider",
     RouterFunction
   ]);
 
-  function RouterFunction($stateProvider, $locationProvider){
-    $locationProvider.html5Mode(true);
+  function RouterFunction($stateProvider){
     $stateProvider
     .state("grumbleIndex", {
       url: "/grumbles",
       templateUrl: "js/grumbles/index.html",
       controller: "GrumbleIndexController",
       controllerAs: "GrumbleIndexViewModel"
+    })
+    .state("grumbleNew", {
+      url: "/grumbles/new",
+      templateUrl: "js/grumbles/new.html",
+      controller: "GrumbleNewController",
+      controllerAs: "GrumbleNewViewModel"
+    })
+    .state("grumbleEdit", {
+      url: "/grumbles/:id/edit",
+      templateUrl: "js/grumbles/edit.html",
+      controller: "GrumbleEditController",
+      controllerAs: "GrumbleEditViewModel"
     })
     .state("grumbleShow", {
       url: "/grumbles/:id",

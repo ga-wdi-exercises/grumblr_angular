@@ -1,4 +1,5 @@
 <h2>{{GrumbleShowViewModel.grumble.title}}</h2>
-<div>
-  <input data-ng-model="GrumbleShowViewModel.grumble.title" />
-</div>
+<p>Author: {{GrumbleShowViewModel.grumble.authorName}}<br>
+Created at: {{GrumbleShowViewModel.grumble.created_at}}<br>
+{{GrumbleShowViewModel.grumble.content}}<br>
+<img src='{{GrumbleShowViewModel.grumble.photoUrl}}'></p>
