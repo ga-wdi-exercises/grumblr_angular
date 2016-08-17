@@ -1,0 +1,6 @@
+<h2>{{GrumbleShowViewModel.grumble.title}}</h2>
+<p><dfn>Author:</dfn> {{GrumbleShowViewModel.grumble.authorName}}</p>
+<p><dfn>Created:</dfn> {{ GrumbleShowViewModel.grumble.created_at | date }}</p>
+<blockquote>{{  GrumbleShowViewModel.grumble.content  }}</blockquote>
+
+<img data-ng-src="{{ GrumbleShowViewModel.grumble.photoUrl }}" width="500px" alt="{{ GrumbleShowViewModel.grumble.title }}" />
