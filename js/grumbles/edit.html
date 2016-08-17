@@ -1,0 +1,10 @@
+<h2>Edit Grumble</h2>
+
+<form>
+  <input data-ng-model="GrumbleEditViewModel.grumble.title" />
+  <input data-ng-model="GrumbleEditViewModel.grumble.authorName" />
+  <input data-ng-model="GrumbleEditViewModel.grumble.photoUrl" />
+  <textarea data-ng-model="GrumbleEditViewModel.grumble.content"></textarea>
+  <button type="button" data-ng-click="GrumbleEditViewModel.update()">Update</button>
+  <button data-ng-click="GrumbleEditViewModel.destroy()">Delete</button>
+</form>

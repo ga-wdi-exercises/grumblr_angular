@@ -1,0 +1,7 @@
+<a data-ui-sref="grumbleNew">New Grumble</a>
+<h2>These are all the Grumbles</h2>
+
+<div data-ng-repeat="grumble in GrumbleIndexViewModel.grumbles | orderBy:'-created_at'">
+  <p><a data-ui-sref="grumbleShow({ id: grumble.id })">{{ grumble.title }}</a> | <a data-ui-sref="grumbleEdit({ id: grumble.id })">Edit</a></p>
+  <img data-ng-src="{{ grumble.photoUrl }}" width="500px" alt="{{ grumble.title }}" />
+</div>
