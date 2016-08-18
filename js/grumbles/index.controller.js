@@ -1,18 +1,16 @@
-"use strict";
-
+// js/controllers/index.controller.js
 (function(){
-  angular
-  .module("grumbles")
-  .controller("GrumbleIndexController", [
-    GrumbleIndexControllerFunction
-  ]);
 
-  function GrumbleIndexControllerFunction(){
-    this.grumbles = [
-      {title: "These"},
-      {title: "Are"},
-      {title: "Hardcoded"},
-      {title: "Grumbles"}
-    ]
-  }
+  angular
+    .module( "grumbles" )
+    .controller( "GrumbleIndexController", [
+      "GrumbleFactory",
+      GrumbleIndexControllerFunction
+    ]);
+
+    // Whenever `.grumbles` is called on our ViewModel, it returns the response from `.query()`
+    function GrumbleIndexControllerFunction( GrumbleFactory ){
+      this.grumbles = GrumbleFactory.query();
+    }
+
 }());
