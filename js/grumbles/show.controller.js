@@ -2,9 +2,10 @@ angular
 .module("grumblr")
 .controller("GrumbleShowController", [
   "$stateParams",
-  grumbleShowControllerCallback
+  GumbleShowControllerFunction
 ]);
 
-function grumbleShowControllerCallback($stateParams) {
+function GrumbleShowControllerFunction($stateParams){
+  console.log($stateParams);
   this.grumble = grumbles[$stateParams.id];
 }

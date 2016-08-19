@@ -1,9 +1,20 @@
+var grumbles = [
+  {
+    body: "Grumble1"
+  },
+  {
+    body: "Grumble2"
+  },
+  {
+    body: "Grumble3"
+  }
+]
 angular
 .module("grumblr")
 .controller("GrumbleIndexController", [
-  GrumbleIndexControllerCallback
+  GrumbleIndexControllerFunction
 ]);
 
-function GrumbleIndexControllerCallback() {
+function GrumbleIndexControllerFunction(){
   this.grumbles = grumbles;
 }
