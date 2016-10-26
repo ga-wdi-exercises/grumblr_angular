@@ -1,27 +1,30 @@
-"use strict";
-
-(function(){
-  angular
+angular
   .module("grumblr", [
-    "ui.router",
-    "grumbles"
+    "ui.router"
   ])
   .config([
     "$stateProvider",
     RouterFunction
-  ]);
+  ])
+  .controller("GrumbleIndexController", [
+    GrumbleIndexControllerFunction
+  ])
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("grumbleIndex", {
-      url: "/grumbles",
-      templateUrl: "js/grumbles/index.html",
-      controller: "GrumbleIndexController",
-      controllerAs: "GrumbleIndexViewModel"
-    })
-    .state("grumbleShow", {
-      url: "/grumbles/:id",
-      templateUrl: "js/grumbles/show.html"
-    });
+      .state("grumbleIndex", {
+        url: "/grumbles",
+        templateUrl: "js/ng-views/index.html",
+        controller: "GrumbleIndexController",
+        controllerAs: "vm"
+      })
   }
-}());
+
+  function GrumbleIndexControllerFunction(){
+    this.grumbles = [
+      {title: "These"},
+      {title: "Are"},
+      {title: "Hardcoded"},
+      {title: "Grumbles"}
+    ]
+  }
