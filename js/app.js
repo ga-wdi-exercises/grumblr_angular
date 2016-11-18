@@ -22,6 +22,12 @@ function Router($stateProvider){
     controllerAs: "vm",
     templateUrl: "js/ng-views/show.html"
     })
+  .state("grumbleCreate", {
+    url: "/grumbles/new",
+    controller: "GrumbleCreateController",
+    controllerAs: "vm",
+    templateUrl: "/js/ng-views/new.html"
+  })
 }
 
 function GrumbleIndexControllerFunction(){
