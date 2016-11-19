@@ -1,0 +1,7 @@
+<h2>I'm in the Grumbles</h2>
+<div data-ng-repeat="grumble in vm.grumbles">
+  <p><a data-ui-sref="grumbleShow({id: $index})">{{$index + 1}}. {{grumble.title}}</a></p>
+</div>
+<div ng-init="myVar = '/#/creategrumble'">
+  <a ng-href="{{myVar}}">Create a new Grumble</a>
+</div>
