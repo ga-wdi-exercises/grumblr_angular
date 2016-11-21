@@ -1,0 +1,7 @@
+<h2>Create a Grumble</h2>
+<form ng-submit="vm.addGrumble()">
+  <input type="text" ng-model="vm.newGrumble.title">
+  <input type="submit">
+  <p>User input: {{vm.newGrumble.title}}</p>
+</form>
+<a ng-href="/#/grumbles">Back to Grumbles</a>

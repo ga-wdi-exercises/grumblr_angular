@@ -1,0 +1,10 @@
+<h2>I'm in the Grumbles</h2>
+<div
+  ng-repeat="grumble in vm.grumbles"
+  ng-click="vm.change(grumble)"
+  >
+  <a>{{$index + 1}}. {{grumble.title}}</a>
+</div>
+<div ng-init="myVar = '/#/creategrumble'">
+  <a ng-href="{{myVar}}">Create a new Grumble</a>
+</div>
