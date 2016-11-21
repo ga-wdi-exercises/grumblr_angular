@@ -1,0 +1,10 @@
+<h2>I'm the Grumbles index</h2>
+<div data-ng-click="vm.triggerSomething()">
+  Click me
+  {{vm.name}}
+</div>
+<div data-ng-repeat="grumble in vm.grumbles">
+  <p><a data-ui-sref="grumbleShow({id: $index})">{{grumble.title}}</a></p>
+  {{grumble.toggled}}
+  <p data-ng-click="grumble.toggled = !grumble.toggled">Toggle Todo</p>
+</div>
