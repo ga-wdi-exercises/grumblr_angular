@@ -1,0 +1,13 @@
+<h2>I'm the Grumbles Index!</h2>
+<div>
+  title: <input type="text" data-ng-model="vm.newgrumblr.title">
+
+
+  <!--  this is like adding a new model to GrumblrsControllerFunc-->
+  <button data-ng-click="vm.addgrumblr()">Add Grumbl</button>
+</div>
+<div data-ng-repeat="grumble in vm.grumbles">
+  <p><a data-ui-sref="grumbleShow({id: $index})">aaa</a></p>
+
+
+</div>
