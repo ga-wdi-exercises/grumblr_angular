@@ -20,7 +20,10 @@ function Router($stateProvider){
     templateUrl: "js/ng-views/show.html"
   })
   .state("grumbleCreate", {
-
+    url: "/grumbles/:id",
+    controller: "GrumbleNewController",
+    controllerAs: "vm",
+    templateUrl: "js/ng-views/new.html"
   })
   ;
   }
