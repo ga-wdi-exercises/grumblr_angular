@@ -1,6 +1,6 @@
 # Welcome to the API for Grumblr
 
-Once setup, you can access your grumblr api at `http://locahost:3000`.
+When starting out, you will just see a rails app like you've seen in the past couple of weeks. `http://locahost:3000`. We will configure this to be a fully-fledged rails API. For reference, solution code available on solution branch.
 
 ## Setup
 
