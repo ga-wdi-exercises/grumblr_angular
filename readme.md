@@ -4,7 +4,7 @@ When starting out, you will just see a rails app like you've seen in the past co
 
 ## Setup
 
-Clone down this repo. **Don't forget to check out the api-starter branch which is step 2**
+Clone down this repo. **Don't forget to check out the api-starter branch (2nd Step)**
 
 ```
 $ cd grumblr_rails_api
