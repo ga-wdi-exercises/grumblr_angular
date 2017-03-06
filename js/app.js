@@ -1,7 +1,10 @@
 "use strict";
 
 
-angular.module("grumblr", ["ui.router"])
+angular
+  .module("grumblr", [
+    "ui.router"
+  ])
   .config([
     "$stateProvider",
     RouterFunction
@@ -16,7 +19,7 @@ function RouterFunction($stateProvider){
     url: "/grumbles",
     templateUrl: "js/ng-views/index.html",
     controller: "GrumbleIndexController",
-    controllerAs: "GrumbleIndexViewModel"
+    controllerAs: "vm"
   })
   .state("grumbleShow", {
     url: "/grumbles/:id",
