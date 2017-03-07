@@ -1,0 +1,8 @@
+<h2>Create Grumble</h2>
+<form>
+  <input type="text" placeholder="Title" data-ng-model="vm.grumble.title" />
+  <input type="text" placeholder="Author" data-ng-model="vm.grumble.authorName" />
+  <input type="text" placeholder="Photo URL" data-ng-model="vm.grumble.photoUrl" />
+  <textarea type="text" placeholder="Content" data-ng-model="vm.grumble.content"></textarea>
+  <button type="button" data-ng-click="vm.create()">Create Grumble</button>
+</form>
