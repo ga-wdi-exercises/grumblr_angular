@@ -5,6 +5,7 @@ angular
   .config([
     '$stateProvider',
     '$locationProvider',
+    '$urlRouterProvider',
     Router
   ])
   .controller('GrumbleIndexController', [
@@ -15,8 +16,8 @@ angular
     GrumbleShowControllerFunction
   ])
 
-  function Router ($stateProvider, $locationProvider) {
-    $locationProvider.html5Mode(true)
+  function Router ($stateProvider, $locationProvider, $urlRouterProvider) {
+    // $locationProvider.html5Mode(true)
     $stateProvider
       .state('grumbleIndex', {
         url: '/grumbles',
@@ -30,11 +31,11 @@ angular
         controllerAs: 'vm',
         templateUrl: 'js/ng-views/show.html'
       })
+    $urlRouterProvider.otherwise('/grumbles')
   }
 
   function GrumbleIndexControllerFunction () {
     this.grumbles = grumbles
-    console.log(this.grumbles)
   }
 
   function GrumbleShowControllerFunction ($stateParams) {
