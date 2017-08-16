@@ -53,5 +53,4 @@ angular
 
   function GrumbleShowControllerFunction (Grumble, $stateParams) {
     this.grumble = Grumble.get({ id: $stateParams.id })
-    console.log(this.grumble)
   }

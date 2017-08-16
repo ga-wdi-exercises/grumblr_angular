@@ -1,4 +1,4 @@
 <h2>Grumble Index View</h2>
 <div ng-repeat="grumble in vm.grumbles">
-  <p><a ui-sref="grumbleShow({ id: $index })">{{ grumble.title }}</a></p>
+  <p><a ui-sref="grumbleShow({ id: grumble.id })">{{ grumble.title }}</a></p>
 </div>
