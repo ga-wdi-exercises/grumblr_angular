@@ -1,6 +1,7 @@
 angular
   .module('grumblr', [
-    'ui.router'
+    'ui.router',
+    'ngResource'
   ])
   .config([
     '$stateProvider',
@@ -8,13 +9,25 @@ angular
     '$urlRouterProvider',
     Router
   ])
+  .factory('Grumble', [
+    '$resource',
+    Grumble
+  ])
   .controller('GrumbleIndexController', [
+    'Grumble',
     GrumbleIndexControllerFunction
   ])
   .controller('GrumbleShowController', [
+    'Grumble',
     '$stateParams',
     GrumbleShowControllerFunction
   ])
+
+  function Grumble ($resource) {
+    return $resource('http://localhost:3000/grumbles/:id', {}, {
+      update: { method: 'PUT' }
+    })
+  }
 
   function Router ($stateProvider, $locationProvider, $urlRouterProvider) {
     // $locationProvider.html5Mode(true)
@@ -34,10 +47,11 @@ angular
     $urlRouterProvider.otherwise('/grumbles')
   }
 
-  function GrumbleIndexControllerFunction () {
-    this.grumbles = grumbles
+  function GrumbleIndexControllerFunction (Grumble) {
+    this.grumbles = Grumble.query()
   }
 
-  function GrumbleShowControllerFunction ($stateParams) {
-    this.grumble = grumbles[$stateParams.id]
+  function GrumbleShowControllerFunction (Grumble, $stateParams) {
+    this.grumble = Grumble.get({ id: $stateParams.id })
+    console.log(this.grumble)
   }
